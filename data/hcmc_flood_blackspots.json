@@ -1,0 +1,726 @@
+{
+  "metadata": {
+    "title": "Danh mục Điểm đen Ngập nước do Mưa và Triều cường tại TP.HCM",
+    "authority": "Tổng hợp từ Báo cáo Phân loại Tiêu thoát nước - Sở Xây dựng TP.HCM & Trung tâm Quản lý Hạ tầng Kỹ thuật",
+    "updated_at": "2026-10-19",
+    "version": "1.0.0"
+  },
+  "blackspots": [
+    {
+      "street": "Trần Xuân Soạn",
+      "district": "Quận 7",
+      "lat": 10.7523,
+      "lon": 106.7088,
+      "radius_m": 500.0,
+      "cause": "triều cường",
+      "landmark": "Đoạn từ cầu Rạch Ông đến cầu Tân Thuận"
+    },
+    {
+      "street": "Huỳnh Tấn Phát",
+      "district": "Quận 7",
+      "lat": 10.7425,
+      "lon": 106.7275,
+      "radius_m": 350.0,
+      "cause": "cả hai",
+      "landmark": "Đoạn ngã ba Huỳnh Tấn Phát - Nguyễn Thị Thập"
+    },
+    {
+      "street": "Nguyễn Thị Thập",
+      "district": "Quận 7",
+      "lat": 10.7415,
+      "lon": 106.7320,
+      "radius_m": 400.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn chân cầu Phú Mỹ"
+    },
+    {
+      "street": "Lâm Văn Bền",
+      "district": "Quận 7",
+      "lat": 10.7440,
+      "lon": 106.7160,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn qua chợ Cư xá Ngân hàng"
+    },
+    {
+      "street": "Mai Văn Vĩnh",
+      "district": "Quận 7",
+      "lat": 10.7460,
+      "lon": 106.7110,
+      "radius_m": 300.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn giao Nguyễn Thị Thập"
+    },
+    {
+      "street": "Lê Văn Lương",
+      "district": "Huyện Nhà Bè",
+      "lat": 10.7080,
+      "lon": 106.7030,
+      "radius_m": 350.0,
+      "cause": "triều cường",
+      "landmark": "Cầu Rạch Đĩa và Cầu Long Kiểng"
+    },
+    {
+      "street": "Đào Sư Tích",
+      "district": "Huyện Nhà Bè",
+      "lat": 10.7050,
+      "lon": 106.6980,
+      "radius_m": 400.0,
+      "cause": "triều cường",
+      "landmark": "Khu vực trũng thấp ven sông"
+    },
+    {
+      "street": "Nguyễn Bình",
+      "district": "Huyện Nhà Bè",
+      "lat": 10.6870,
+      "lon": 106.7350,
+      "radius_m": 400.0,
+      "cause": "triều cường",
+      "landmark": "Đoạn qua cầu Mương Chuối"
+    },
+    {
+      "street": "Nguyễn Văn Tạo",
+      "district": "Huyện Nhà Bè",
+      "lat": 10.6480,
+      "lon": 106.7450,
+      "radius_m": 450.0,
+      "cause": "triều cường",
+      "landmark": "Khu vực Hiệp Phước - Long Thới"
+    },
+    {
+      "street": "Tôn Thất Thuyết",
+      "district": "Quận 4",
+      "lat": 10.7555,
+      "lon": 106.7025,
+      "radius_m": 400.0,
+      "cause": "triều cường",
+      "landmark": "Ven Kênh Tẻ, đoạn chân cầu Kênh Tẻ"
+    },
+    {
+      "street": "Quốc Hương",
+      "district": "TP Thủ Đức",
+      "ward": "Thảo Điền",
+      "lat": 10.8055,
+      "lon": 106.7300,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": "Rốn ngập Thảo Điền đoạn giao Xuân Thủy"
+    },
+    {
+      "street": "Xuân Thủy",
+      "district": "TP Thủ Đức",
+      "ward": "Thảo Điền",
+      "lat": 10.8045,
+      "lon": 106.7340,
+      "radius_m": 250.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn Thảo Điền Pearl"
+    },
+    {
+      "street": "Nguyễn Văn Hưởng",
+      "district": "TP Thủ Đức",
+      "ward": "Thảo Điền",
+      "lat": 10.8090,
+      "lon": 106.7315,
+      "radius_m": 300.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn ven sông Thảo Điền"
+    },
+    {
+      "street": "Tô Ngọc Vân",
+      "district": "TP Thủ Đức",
+      "ward": "Linh Đông",
+      "lat": 10.8580,
+      "lon": 106.7550,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": "Khu vực Chợ Thủ Đức và đường ray xe lửa"
+    },
+    {
+      "street": "Dương Văn Cam",
+      "district": "TP Thủ Đức",
+      "ward": "Linh Chiểu",
+      "lat": 10.8525,
+      "lon": 106.7585,
+      "radius_m": 250.0,
+      "cause": "mưa lớn",
+      "landmark": "Khu vực Chợ Thủ Đức"
+    },
+    {
+      "street": "Đặng Thị Rành",
+      "district": "TP Thủ Đức",
+      "ward": "Linh Chiểu",
+      "lat": 10.8510,
+      "lon": 106.7595,
+      "radius_m": 200.0,
+      "cause": "mưa lớn",
+      "landmark": "Xung quanh Chợ Thủ Đức"
+    },
+    {
+      "street": "Hồ Văn Tư",
+      "district": "TP Thủ Đức",
+      "ward": "Linh Chiểu",
+      "lat": 10.8530,
+      "lon": 106.7570,
+      "radius_m": 250.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn giao Võ Văn Ngân"
+    },
+    {
+      "street": "Võ Văn Ngân",
+      "district": "TP Thủ Đức",
+      "lat": 10.8505,
+      "lon": 106.7580,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": "Dốc Chợ Thủ Đức đến Nhà thiếu nhi"
+    },
+    {
+      "street": "Kha Vạn Cân",
+      "district": "TP Thủ Đức",
+      "lat": 10.8515,
+      "lon": 106.7565,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn Cầu Ngang Chợ Thủ Đức"
+    },
+    {
+      "street": "Lý Tế Xuyên",
+      "district": "TP Thủ Đức",
+      "ward": "Linh Đông",
+      "lat": 10.8535,
+      "lon": 106.7510,
+      "radius_m": 300.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn ngã ba Linh Đông"
+    },
+    {
+      "street": "Linh Đông",
+      "district": "TP Thủ Đức",
+      "ward": "Linh Đông",
+      "lat": 10.8520,
+      "lon": 106.7525,
+      "radius_m": 250.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn trũng thấp Linh Đông"
+    },
+    {
+      "street": "Bình Chiểu",
+      "district": "TP Thủ Đức",
+      "ward": "Bình Chiểu",
+      "lat": 10.8750,
+      "lon": 106.7380,
+      "radius_m": 300.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn ngã tư Cầu Vượt Gò Dưa"
+    },
+    {
+      "street": "Tỉnh Lộ 43",
+      "district": "TP Thủ Đức",
+      "ward": "Bình Chiểu",
+      "lat": 10.8780,
+      "lon": 106.7450,
+      "radius_m": 400.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn giáp ranh Bình Dương"
+    },
+    {
+      "street": "Lê Thị Hoa",
+      "district": "TP Thủ Đức",
+      "lat": 10.8795,
+      "lon": 106.7410,
+      "radius_m": 300.0,
+      "cause": "mưa lớn",
+      "landmark": "Khu phố chợ Bình Chiểu"
+    },
+    {
+      "street": "Đường số 11",
+      "district": "TP Thủ Đức",
+      "ward": "Linh Xuân",
+      "lat": 10.8540,
+      "lon": 106.7555,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn bờ rạch Linh Xuân"
+    },
+    {
+      "street": "Quốc Lộ 13",
+      "district": "TP Thủ Đức",
+      "ward": "Hiệp Bình Chánh",
+      "lat": 10.8350,
+      "lon": 106.7110,
+      "radius_m": 450.0,
+      "cause": "triều cường",
+      "landmark": "Chân cầu Ông Dầu đến ngã tư Bình Triệu"
+    },
+    {
+      "street": "Phạm Văn Đồng",
+      "district": "TP Thủ Đức",
+      "lat": 10.8385,
+      "lon": 106.7260,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn vòng xoay Linh Đông"
+    },
+    {
+      "street": "Lương Định Của",
+      "district": "TP Thủ Đức",
+      "ward": "An Phú",
+      "lat": 10.7910,
+      "lon": 106.7320,
+      "radius_m": 400.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn nút giao An Phú"
+    },
+    {
+      "street": "Mai Chí Thọ",
+      "district": "TP Thủ Đức",
+      "lat": 10.7935,
+      "lon": 106.7440,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn hầm chui nút giao An Phú"
+    },
+    {
+      "street": "Nguyễn Duy Trinh",
+      "district": "TP Thủ Đức",
+      "lat": 10.7890,
+      "lon": 106.7620,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn chân cầu Giồng Ông Tố"
+    },
+    {
+      "street": "Đỗ Xuân Hợp",
+      "district": "TP Thủ Đức",
+      "lat": 10.8120,
+      "lon": 106.7750,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn chân cầu Nam Lý"
+    },
+    {
+      "street": "Tăng Nhơn Phú",
+      "district": "TP Thủ Đức",
+      "lat": 10.8340,
+      "lon": 106.7720,
+      "radius_m": 300.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn trước Trường CĐ Công Thương"
+    },
+    {
+      "street": "Lê Văn Việt",
+      "district": "TP Thủ Đức",
+      "lat": 10.8460,
+      "lon": 106.7780,
+      "radius_m": 300.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn ngã tư Thủ Đức"
+    },
+    {
+      "street": "Nguyễn Hữu Cảnh",
+      "district": "Quận Bình Thạnh",
+      "lat": 10.7915,
+      "lon": 106.7160,
+      "radius_m": 500.0,
+      "cause": "cả hai",
+      "landmark": "Đoạn chân cầu vượt Nguyễn Hữu Cảnh và The Manor"
+    },
+    {
+      "street": "Ung Văn Khiêm",
+      "district": "Quận Bình Thạnh",
+      "lat": 10.8058,
+      "lon": 106.7156,
+      "radius_m": 400.0,
+      "cause": "cả hai",
+      "landmark": "Đoạn giao ngã năm Đài Liệt Sĩ"
+    },
+    {
+      "street": "Nguyễn Gia Trí",
+      "district": "Quận Bình Thạnh",
+      "lat": 10.8030,
+      "lon": 106.7140,
+      "radius_m": 250.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn D2 cũ giao Ung Văn Khiêm"
+    },
+    {
+      "street": "Xô Viết Nghệ Tĩnh",
+      "district": "Quận Bình Thạnh",
+      "lat": 10.8035,
+      "lon": 106.7125,
+      "radius_m": 300.0,
+      "cause": "triều cường",
+      "landmark": "Đoạn ngã tư Hàng Xanh"
+    },
+    {
+      "street": "Bạch Đằng",
+      "district": "Quận Bình Thạnh",
+      "lat": 10.8010,
+      "lon": 106.7065,
+      "radius_m": 250.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn Chợ Bà Chiểu"
+    },
+    {
+      "street": "Đinh Bộ Lĩnh",
+      "district": "Quận Bình Thạnh",
+      "lat": 10.8110,
+      "lon": 106.7115,
+      "radius_m": 400.0,
+      "cause": "cả hai",
+      "landmark": "Đoạn Bến xe Miền Đông cũ"
+    },
+    {
+      "street": "Nguyễn Xí",
+      "district": "Quận Bình Thạnh",
+      "lat": 10.8190,
+      "lon": 106.7050,
+      "radius_m": 350.0,
+      "cause": "triều cường",
+      "landmark": "Đoạn chân Cầu Đỏ"
+    },
+    {
+      "street": "Bùi Đình Túy",
+      "district": "Quận Bình Thạnh",
+      "lat": 10.8060,
+      "lon": 106.7010,
+      "radius_m": 300.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn chân cầu Bùi Đình Túy"
+    },
+    {
+      "street": "Nơ Trang Long",
+      "district": "Quận Bình Thạnh",
+      "lat": 10.8170,
+      "lon": 106.6960,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn Cầu Băng Ky"
+    },
+    {
+      "street": "Bình Quới",
+      "district": "Quận Bình Thạnh",
+      "lat": 10.8240,
+      "lon": 106.7320,
+      "radius_m": 450.0,
+      "cause": "triều cường",
+      "landmark": "Bán đảo Thanh Đa, đoạn bến phà Bình Quới"
+    },
+    {
+      "street": "Nguyễn Văn Khối",
+      "district": "Quận Gò Vấp",
+      "lat": 10.8418,
+      "lon": 106.6530,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn giao Lê Văn Thọ, Công viên Làng Hoa"
+    },
+    {
+      "street": "Lê Văn Thọ",
+      "district": "Quận Gò Vấp",
+      "lat": 10.8430,
+      "lon": 106.6550,
+      "radius_m": 250.0,
+      "cause": "mưa lớn",
+      "landmark": "Khu vực Làng Hoa Gò Vấp"
+    },
+    {
+      "street": "Phan Huy Ích",
+      "district": "Quận Gò Vấp",
+      "lat": 10.8320,
+      "lon": 106.6380,
+      "radius_m": 450.0,
+      "cause": "mưa lớn",
+      "landmark": "Ranh giới Gò Vấp - Tân Bình, chân cầu Tham Lương"
+    },
+    {
+      "street": "Phạm Văn Chiêu",
+      "district": "Quận Gò Vấp",
+      "lat": 10.8490,
+      "lon": 106.6520,
+      "radius_m": 400.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn trước Trường THCS Lam Sơn"
+    },
+    {
+      "street": "Lê Đức Thọ",
+      "district": "Quận Gò Vấp",
+      "lat": 10.8475,
+      "lon": 106.6690,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn Ngã ba Cây Trâm"
+    },
+    {
+      "street": "Quang Trung",
+      "district": "Quận Gò Vấp",
+      "lat": 10.8390,
+      "lon": 106.6580,
+      "radius_m": 400.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn Chợ Cầu"
+    },
+    {
+      "street": "Nguyễn Thái Sơn",
+      "district": "Quận Gò Vấp",
+      "lat": 10.8250,
+      "lon": 106.6850,
+      "radius_m": 300.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn Ngã sáu Gò Vấp"
+    },
+    {
+      "street": "Nguyễn Oanh",
+      "district": "Quận Gò Vấp",
+      "lat": 10.8360,
+      "lon": 106.6780,
+      "radius_m": 300.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn chân Cầu An Lộc"
+    },
+    {
+      "street": "Nguyễn Văn Công",
+      "district": "Quận Gò Vấp",
+      "lat": 10.8195,
+      "lon": 106.6740,
+      "radius_m": 250.0,
+      "cause": "mưa lớn",
+      "landmark": "Khu vực sân bay"
+    },
+    {
+      "street": "CityLand",
+      "district": "Quận Gò Vấp",
+      "lat": 10.8305,
+      "lon": 106.6710,
+      "radius_m": 300.0,
+      "cause": "mưa lớn",
+      "landmark": "Khu đô thị CityLand Park Hills"
+    },
+    {
+      "street": "Đồng Đen",
+      "district": "Quận Tân Bình",
+      "lat": 10.7930,
+      "lon": 106.6450,
+      "radius_m": 300.0,
+      "cause": "mưa lớn",
+      "landmark": "Khu Bàu Cát"
+    },
+    {
+      "street": "Bàu Cát",
+      "district": "Quận Tân Bình",
+      "lat": 10.7915,
+      "lon": 106.6470,
+      "radius_m": 250.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn Chợ Bàu Cát"
+    },
+    {
+      "street": "Trương Công Định",
+      "district": "Quận Tân Bình",
+      "lat": 10.7960,
+      "lon": 106.6440,
+      "radius_m": 250.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn giao Ba Vân"
+    },
+    {
+      "street": "Âu Cơ",
+      "district": "Quận Tân Bình",
+      "lat": 10.7850,
+      "lon": 106.6475,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn giao Lạc Long Quân"
+    },
+    {
+      "street": "Hồng Lạc",
+      "district": "Quận Tân Bình",
+      "lat": 10.7885,
+      "lon": 106.6455,
+      "radius_m": 250.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn giao Đồng Đen"
+    },
+    {
+      "street": "Hồng Hà",
+      "district": "Quận Tân Bình",
+      "lat": 10.8130,
+      "lon": 106.6705,
+      "radius_m": 300.0,
+      "cause": "mưa lớn",
+      "landmark": "Khu vực tiếp giáp sân bay Tân Sơn Nhất"
+    },
+    {
+      "street": "Phan Anh",
+      "district": "Quận Tân Phú",
+      "lat": 10.7670,
+      "lon": 106.6270,
+      "radius_m": 450.0,
+      "cause": "mưa lớn",
+      "landmark": "Ranh giới Tân Phú - Bình Tân"
+    },
+    {
+      "street": "Thoại Ngọc Hầu",
+      "district": "Quận Tân Phú",
+      "lat": 10.7820,
+      "lon": 106.6320,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": "Trước UBND Quận Tân Phú"
+    },
+    {
+      "street": "Hòa Bình",
+      "district": "Quận Tân Phú",
+      "lat": 10.7695,
+      "lon": 106.6390,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": "Cổng sau Công viên Đầm Sen"
+    },
+    {
+      "street": "Nguyễn Sơn",
+      "district": "Quận Tân Phú",
+      "lat": 10.7830,
+      "lon": 106.6260,
+      "radius_m": 300.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn Chợ Tân Hương"
+    },
+    {
+      "street": "Kênh 19/5",
+      "district": "Quận Tân Phú",
+      "lat": 10.8115,
+      "lon": 106.6230,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": "Khu vực KCN Tân Bình"
+    },
+    {
+      "street": "Kinh Dương Vương",
+      "district": "Quận Bình Tân",
+      "lat": 10.7485,
+      "lon": 106.6180,
+      "radius_m": 450.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn Mũi Tàu / Bến xe Miền Tây"
+    },
+    {
+      "street": "Hồ Học Lãm",
+      "district": "Quận Bình Tân",
+      "lat": 10.7290,
+      "lon": 106.6130,
+      "radius_m": 450.0,
+      "cause": "cả hai",
+      "landmark": "Đoạn giao Võ Văn Kiệt và Quốc lộ 1"
+    },
+    {
+      "street": "Mã Lò",
+      "district": "Quận Bình Tân",
+      "lat": 10.7620,
+      "lon": 106.6095,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": "Khu vực Nghĩa trang Bình Hưng Hòa cũ"
+    },
+    {
+      "street": "Bà Hom",
+      "district": "Quận 6",
+      "lat": 10.7580,
+      "lon": 106.6250,
+      "radius_m": 300.0,
+      "cause": "mưa lớn",
+      "landmark": "Khu vực Chợ Cây Da Sà"
+    },
+    {
+      "street": "An Dương Vương",
+      "district": "Quận 6",
+      "lat": 10.7410,
+      "lon": 106.6260,
+      "radius_m": 400.0,
+      "cause": "cả hai",
+      "landmark": "Đoạn Tân Tạo - An Lạc"
+    },
+    {
+      "street": "Tân Hòa Đông",
+      "district": "Quận 6",
+      "lat": 10.7640,
+      "lon": 106.6240,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": "Đoạn ngã ba Tân Hòa Đông - Bà Hom"
+    },
+    {
+      "street": "Hậu Giang",
+      "district": "Quận 6",
+      "lat": 10.7510,
+      "lon": 106.6430,
+      "radius_m": 300.0,
+      "cause": "triều cường",
+      "landmark": "Chân cầu Hậu Giang"
+    },
+    {
+      "street": "Mễ Cốc",
+      "district": "Quận 8",
+      "lat": 10.7270,
+      "lon": 106.6340,
+      "radius_m": 450.0,
+      "cause": "triều cường",
+      "landmark": "Rốn ngập bờ kè Bến Mễ Cốc"
+    },
+    {
+      "street": "Bến Phú Định",
+      "district": "Quận 8",
+      "lat": 10.7220,
+      "lon": 106.6280,
+      "radius_m": 400.0,
+      "cause": "triều cường",
+      "landmark": "Khu vực bến phà Phú Định cũ"
+    },
+    {
+      "street": "Phạm Thế Hiển",
+      "district": "Quận 8",
+      "lat": 10.7430,
+      "lon": 106.6770,
+      "radius_m": 450.0,
+      "cause": "triều cường",
+      "landmark": "Đoạn dọc bờ Kênh Đôi, Phường 4 và Phường 7"
+    },
+    {
+      "street": "Lương Ngọc Quyến",
+      "district": "Quận 8",
+      "lat": 10.7245,
+      "lon": 106.6370,
+      "radius_m": 300.0,
+      "cause": "triều cường",
+      "landmark": "Khu vực Bến Bình Đông"
+    },
+    {
+      "street": "Hồ Thành Biên",
+      "district": "Quận 8",
+      "lat": 10.7415,
+      "lon": 106.6810,
+      "radius_m": 250.0,
+      "cause": "triều cường",
+      "landmark": "Đoạn Rạch Ông Lớn"
+    },
+    {
+      "street": "Lê Lợi",
+      "district": "Quận 1",
+      "lat": 10.7735,
+      "lon": 106.7000,
+      "radius_m": 150.0,
+      "cause": "mưa lớn",
+      "landmark": "Khu vực trung tâm Chợ Bến Thành"
+    },
+    {
+      "street": "Bùi Viện",
+      "district": "Quận 1",
+      "lat": 10.7675,
+      "lon": 106.6930,
+      "radius_m": 150.0,
+      "cause": "mưa lớn",
+      "landmark": "Phố đi bộ Bùi Viện đoạn Đỗ Quang Đẩu"
+    }
+  ]
+}

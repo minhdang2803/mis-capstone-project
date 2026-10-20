@@ -1,0 +1,21 @@
+scenario_id,title,b1_osrm_safe,b1_distance_km,b1_latency_ms,b2_single_agent_safe,b2_distance_km,b2_latency_ms,proposed_safe,proposed_reflection_loops,proposed_distance_km,proposed_latency_ms
+1,Mưa lớn gây ngập sâu đường Quốc Hương - Thảo Điền TP Thủ Đức (tháng 9),False,0.67,0.26,False,0.67,0.27,False,3,3.61,0.7
+2,Mưa lớn làm đường Tô Ngọc Vân và chợ Thủ Đức thành sông (tháng 9),False,1.63,0.08,True,1.63,0.23,True,0,1.63,0.17
+3,Nước chảy cuồn cuộn ngã người trên đường Lý Tế Xuyên - Linh Đông (tháng 9),False,1.25,0.09,False,1.25,0.23,False,3,2.86,0.9
+4,Mưa to 15 phút gây ngập đường Bình Chiểu (tháng 9),False,2.5,0.09,False,2.5,0.19,True,1,3.32,0.42
+5,Mưa đêm làm xe chết máy la liệt trên đường Phan Huy Ích (tháng 9),False,3.12,0.09,False,3.12,0.17,True,1,4.31,0.47
+6,Mưa lớn giờ tan tầm ngã tư Hàng Xanh ùn tắc và ngập cục bộ (tháng 9),True,2.06,0.09,True,2.06,0.19,True,0,2.06,0.17
+7,Ngập sâu ngã tư Nguyễn Văn Khối - Lê Văn Thọ tại Làng Hoa Gò Vấp (tháng 9),False,0.86,0.08,False,0.86,0.21,False,3,3.18,0.92
+8,Ngập nặng kỷ lục đường Phan Huy Ích khiến xe buýt chết máy (tháng 9),True,3.33,0.09,True,3.33,0.19,True,0,3.33,0.18
+9,Nước rạch tràn bờ nhấn chìm khu dân cư đường số 11 phường Thủ Đức (tháng 9),False,1.29,0.09,False,1.29,0.2,False,3,2.91,0.76
+10,"Ung Văn Khiêm ngập nửa bánh xe, kẹt xe không lối thoát (tháng 10)",False,2.67,0.09,False,2.67,0.23,False,3,3.31,0.75
+11,Mưa tạnh nhưng nước vẫn ngập dâng cao tại Phan Huy Ích (tháng 10),True,3.6,0.09,False,3.6,0.19,True,1,3.98,0.45
+12,Mưa 30 phút đường Mã Lò ngập nửa bánh xe (tháng 10),True,2.91,0.09,True,2.91,0.2,True,0,2.91,0.17
+13,Mưa trưa gây ngập đường Bùi Viện và Lê Lợi Quận 1 (tháng 10),False,0.62,0.08,False,0.62,0.21,True,1,2.7,0.58
+14,Đường trục Nguyễn Thái Sơn - Nguyễn Oanh Gò Vấp ngập giờ tan tầm (tháng 10),False,4.23,0.08,False,4.23,0.22,False,3,4.23,0.85
+15,Tầng hầm biệt thự CityLand Gò Vấp ngập sâu hơn 1m (tháng 10),False,1.09,0.09,False,1.09,0.17,False,3,1.64,0.72
+16,Mưa rỉ rả cả đêm làm Nguyễn Văn Khối chìm trong biển nước (tháng 10),True,1.45,0.09,True,1.45,0.19,True,0,1.45,0.2
+17,"Triều cường 1,71m tràn ngập đường Nguyễn Bình Nhà Bè (tháng 10)",False,4.45,0.09,False,4.45,0.19,False,3,4.48,0.75
+18,Triều cường dâng sóng trên đường Bình Quới Thanh Đa (tháng 10),False,3.3,0.1,False,3.3,0.19,True,1,4.02,0.47
+19,Triều cường vượt báo động 3 tràn ngập đường Trần Xuân Soạn (tháng 10),True,5.2,0.09,True,5.2,0.19,True,0,5.2,0.22
+20,Triều cường nhấn chìm rốn ngập đường Đào Sư Tích Nhà Bè (tháng 10),True,2.87,0.1,True,2.87,0.22,True,0,2.87,0.16
