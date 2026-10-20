@@ -1,4 +1,4 @@
-# MAS4POI: Multi-Agent Traffic Routing Backend for Flood Hazard Avoidance in Ho Chi Minh City
+#Multi-Agent Traffic Routing Backend for Flood Hazard Avoidance in Ho Chi Minh City
 
 This repository implements the Multi-Agent Traffic Routing System proposed for Research Question 1 (RQ1) in Master's Thesis in MIS.
 
