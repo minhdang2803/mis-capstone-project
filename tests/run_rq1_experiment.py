@@ -128,7 +128,13 @@ def run_rq1_benchmark(args):
         scenarios = json.load(f)
     if args.limit:
         scenarios = scenarios[: args.limit]
-    systems = [s for s in SYSTEMS if args.ablation or s != "B1PLUS_ABLATION"]
+    if args.systems:
+        systems = [s.strip().upper() for s in args.systems.split(",") if s.strip()]
+        unknown = [s for s in systems if s not in SYSTEMS]
+        if unknown:
+            sys.exit(f"Unknown system(s): {', '.join(unknown)}. Choose from: {', '.join(SYSTEMS)}")
+    else:
+        systems = [s for s in SYSTEMS if args.ablation or s != "B1PLUS_ABLATION"]
 
     settings.OSRM_CACHE_ENABLED = args.use_cache  # cached OSRM replies would make latency meaningless
     preflight(args)
@@ -213,5 +219,9 @@ if __name__ == "__main__":
     parser.add_argument("--limit", type=int, default=0, help="only the first N scenarios")
     parser.add_argument("--allow-fallback", action="store_true", help="permit gazetteer fallback when Gemini is unavailable")
     parser.add_argument("--no-ablation", dest="ablation", action="store_false", help="skip the B1+ ablation")
+    parser.add_argument("--systems", default="",
+                        help="comma-separated subset to run, e.g. B1_OSRM,PROPOSED. Repeat runs for variance only "
+                             "need the systems under test; every Gemini-backed system costs daily quota. "
+                             "Keep B1_OSRM in the subset, it is free and supplies the overhead_km reference.")
     parser.add_argument("--use-cache", action="store_true", help="keep the OSRM response cache on (distorts latency)")
     run_rq1_benchmark(parser.parse_args())
