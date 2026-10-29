@@ -39,11 +39,13 @@ def run_langgraph_workflow(
     max_reflections: int = 2,
     enable_reflection: bool = True,
     strict_perception: bool = False,
+    detour_strategy: str = "ring",
 ) -> AgentState:
     """
     Executes the Multi-Agent LangGraph StateGraph workflow.
     With enable_reflection=False the Reflector still verifies the route but never triggers a retry.
     With strict_perception=True a Gemini failure raises instead of silently using the gazetteer.
+    detour_strategy picks how the Reflector places waypoints: "ring" (v2) or "perpendicular" (v1).
     """
     start_time = time.time()
 
@@ -68,6 +70,7 @@ def run_langgraph_workflow(
         "best_attempt": None,
         "perception_source": "none",
         "strict_perception": strict_perception,
+        "detour_strategy": detour_strategy,
     }
 
     state = _WORKFLOW.invoke(state)

@@ -21,3 +21,4 @@ class AgentState(TypedDict):
     best_attempt: Optional[Dict[str, Any]]
     perception_source: str    # "gemini" | "gazetteer_fallback" | "none"
     strict_perception: bool   # raise instead of silently falling back to the gazetteer
+    detour_strategy: str      # "ring" (v2, searches rings around the zone) | "perpendicular" (v1)

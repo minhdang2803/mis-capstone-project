@@ -18,6 +18,11 @@ class AppSettings:
     # farthest the waypoint may sit from the road network before it is rejected
     DETOUR_MARGIN_M: float = float(os.getenv("DETOUR_MARGIN_M", "120"))
     MAX_SNAP_DISTANCE_M: float = float(os.getenv("MAX_SNAP_DISTANCE_M", "200"))
+    # Reflector ring search: candidate waypoints sit on DETOUR_RING_OFFSETS_M rings around a
+    # violated hazard, DETOUR_BEARINGS of them per ring. Fixed before the benchmark so the
+    # numbers are not tuned on the scenario set.
+    DETOUR_BEARINGS: int = int(os.getenv("DETOUR_BEARINGS", "16"))
+    DETOUR_RING_OFFSETS_M: tuple = (150.0, 300.0, 600.0, 1000.0)
     GOOGLE_API_KEY: str = os.getenv("GOOGLE_API_KEY", os.getenv("GEMINI_API_KEY", ""))
     GEMINI_MODEL: str = os.getenv("GEMINI_MODEL", "gemini-3.1-flash-lite")
 
