@@ -2,6 +2,10 @@ import unittest
 import os
 import sys
 
+needs_llm = unittest.skipUnless(
+    os.getenv("RUN_LLM_TESTS") == "1", "needs a working Gemini key; set RUN_LLM_TESTS=1"
+)
+
 # Đảm bảo đường dẫn import tới thư mục gốc của project
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
@@ -18,6 +22,13 @@ class TestTrafficPerceptionAgent(unittest.TestCase):
 
     def setUp(self):
         """Khởi tạo trạng thái AgentState mẫu trước mỗi test case."""
+        if os.getenv("RUN_LLM_TESTS") != "1":
+            # Hermetic by default: no network calls, so tests neither burn Gemini quota nor depend on it
+            from app.core.settings import settings
+
+            original_key = settings.GOOGLE_API_KEY
+            settings.GOOGLE_API_KEY = ""
+            self.addCleanup(setattr, settings, "GOOGLE_API_KEY", original_key)
         self.base_state: AgentState = {
             "scenario_id": 1,
             "user_query": "Tìm đường từ Chợ Bến Thành sang Crescent Mall Quận 7",
@@ -60,8 +71,7 @@ class TestTrafficPerceptionAgent(unittest.TestCase):
         self.assertAlmostEqual(txs["lon"], 106.70, delta=0.05)
         self.assertGreater(txs["radius_m"], 0.0)
 
-        # Kiểm tra độ chính xác bóc tách
-        self.assertEqual(result["extraction_accuracy"], 1.0)
+        self.assertIn(result["perception_source"], ("gemini", "gazetteer_fallback"))
         print("\n[Test 1 PASS] Trích xuất thành công Trần Xuân Soạn:", txs)
 
     def test_02_multiple_flood_hazards_extraction(self):
@@ -82,6 +92,7 @@ class TestTrafficPerceptionAgent(unittest.TestCase):
         self.assertTrue(any("võ văn ngân" in s for s in street_names), "Thiếu đường Võ Văn Ngân.")
         print(f"\n[Test 2 PASS] Trích xuất thành công {len(hazards)} điểm ngập: {street_names}")
 
+    @needs_llm
     def test_03_negative_case_normal_traffic(self):
         """Kiểm thử 3: Bản tin bình thường không ngập lụt -> Không được ảo giác tạo điểm cấm."""
         news = (
@@ -94,7 +105,6 @@ class TestTrafficPerceptionAgent(unittest.TestCase):
         hazards = result["avoid_points"]
 
         self.assertEqual(len(hazards), 0, "Không được tự ý tạo điểm cấm khi đường không ngập.")
-        self.assertEqual(result["extraction_accuracy"], 0.0)
         print("\n[Test 3 PASS] Nhận diện chính xác bản tin không ngập lụt (0 hazards).")
 
     def test_04_gazetteer_fallback_mechanism(self):
@@ -136,6 +146,7 @@ class TestTrafficPerceptionAgent(unittest.TestCase):
 
         print("\n[Test 5 PASS] Dịch vụ Geocoding phản hồi tọa độ chuẩn xác.")
 
+    @needs_llm
     def test_06_colloquial_social_media_extraction(self):
         """Kiểm thử 6: Trích xuất bản tin từ mạng xã hội với văn phong đời thường, ngôn ngữ tự nhiên."""
         news = (
@@ -156,7 +167,9 @@ class TestTrafficPerceptionAgent(unittest.TestCase):
     def test_07_llm_api_exception_fallback(self):
         """Kiểm thử 7: Giả lập lỗi API LLM (Network Timeout / Quota) -> Hệ thống tự động fallback êm thấm."""
         from unittest.mock import patch
-        
+        from app.core.settings import settings
+
+        settings.GOOGLE_API_KEY = "dummy-key-for-mocked-llm"  # enables the LLM path; the call itself is mocked
         news = "Đường Ung Văn Khiêm ngập sâu khiến hàng loạt xe cộ không thể di chuyển."
         self.base_state["news_context"] = news
 
@@ -182,8 +195,23 @@ class TestTrafficPerceptionAgent(unittest.TestCase):
         result = traffic_perception_agent(self.base_state)
 
         self.assertEqual(len(result["avoid_points"]), 0)
-        self.assertEqual(result["extraction_accuracy"], 0.0)
+        self.assertEqual(result["perception_source"], "none")
         print("\n[Test 8 PASS] Xử lý an toàn với đầu vào trống rỗng.")
+
+    def test_09_strict_mode_refuses_silent_fallback(self):
+        """Kiểm thử 9: strict_perception=True phải báo lỗi thay vì lặng lẽ dùng Gazetteer."""
+        from unittest.mock import patch
+        from app.agents.perception import PerceptionError
+
+        from app.core.settings import settings
+
+        settings.GOOGLE_API_KEY = "dummy-key-for-mocked-llm"
+        self.base_state["news_context"] = "Đường Ung Văn Khiêm ngập sâu."
+        self.base_state["strict_perception"] = True
+        with patch("app.agents.perception.ChatGoogleGenerativeAI.with_structured_output") as mock_extractor:
+            mock_extractor.side_effect = RuntimeError("Mocked quota error")
+            with self.assertRaises(PerceptionError):
+                traffic_perception_agent(self.base_state)
 
 
 if __name__ == "__main__":

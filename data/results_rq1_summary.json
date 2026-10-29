@@ -1,0 +1,79 @@
+{
+  "scenarios": 20,
+  "feasible_scenarios": 15,
+  "runs": 3,
+  "max_reflections": 2,
+  "gemini_model": "gemini-3.1-flash-lite",
+  "osrm_server": "http://localhost:5001",
+  "strict_perception": true,
+  "systems": {
+    "B1PLUS_ABLATION": {
+      "n_rows": 60,
+      "errors": 0,
+      "avoidance_rate_pct_all": 50.0,
+      "avoidance_rate_pct_feasible": 66.66666666666666,
+      "avoidance_rate_pct_sd_across_runs": 0.0,
+      "mean_overhead_km": 0.0,
+      "mean_latency_ms": 10621.821666666667,
+      "p95_latency_ms": 28542.9,
+      "pct_under_latency_target": 20.0,
+      "mean_reflections": null,
+      "extraction_precision": 0.925,
+      "extraction_recall": 0.825,
+      "grounding_accuracy": 0.825,
+      "perception_sources": [
+        "gemini"
+      ]
+    },
+    "B1_OSRM": {
+      "n_rows": 60,
+      "errors": 0,
+      "avoidance_rate_pct_all": 50.0,
+      "avoidance_rate_pct_feasible": 66.66666666666666,
+      "avoidance_rate_pct_sd_across_runs": 0.0,
+      "mean_overhead_km": 0.0,
+      "mean_latency_ms": 6.148333333333333,
+      "p95_latency_ms": 10.0,
+      "pct_under_latency_target": 100.0,
+      "mean_reflections": null,
+      "extraction_precision": null,
+      "extraction_recall": null,
+      "grounding_accuracy": null,
+      "perception_sources": []
+    },
+    "B2_SINGLE_AGENT": {
+      "n_rows": 60,
+      "errors": 0,
+      "avoidance_rate_pct_all": 45.0,
+      "avoidance_rate_pct_feasible": 60.0,
+      "avoidance_rate_pct_sd_across_runs": 0.0,
+      "mean_overhead_km": 2.3334,
+      "mean_latency_ms": 34952.105,
+      "p95_latency_ms": 72976.9,
+      "pct_under_latency_target": 0.0,
+      "mean_reflections": null,
+      "extraction_precision": 0.95,
+      "extraction_recall": 0.75,
+      "grounding_accuracy": 0.75,
+      "perception_sources": []
+    },
+    "PROPOSED": {
+      "n_rows": 60,
+      "errors": 0,
+      "avoidance_rate_pct_all": 65.0,
+      "avoidance_rate_pct_feasible": 86.66666666666667,
+      "avoidance_rate_pct_sd_across_runs": 0.0,
+      "mean_overhead_km": 0.33295,
+      "mean_latency_ms": 12152.655,
+      "p95_latency_ms": 29650.6,
+      "pct_under_latency_target": 15.0,
+      "mean_reflections": 0.7,
+      "extraction_precision": 0.925,
+      "extraction_recall": 0.825,
+      "grounding_accuracy": 0.825,
+      "perception_sources": [
+        "gemini"
+      ]
+    }
+  }
+}

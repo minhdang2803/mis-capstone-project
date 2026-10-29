@@ -1,0 +1,35 @@
+# Production stack: Caddy (HTTPS) -> backend -> OSRM. Only Caddy is exposed to the internet.
+# Usage:  DOMAIN=api.example.com docker compose -f docker-compose.prod.yml up -d --build
+# Secrets (GOOGLE_API_KEY, ...) come from a server-side .env that is never committed.
+services:
+  osrm:
+    image: ghcr.io/project-osrm/osrm-backend:latest
+    command: osrm-routed --algorithm mld /data/hcmc.osrm
+    volumes:
+      - ./osrm/data:/data:ro
+    restart: unless-stopped
+
+  backend:
+    build: .
+    env_file: .env
+    environment:
+      OSRM_SERVER_URL: http://osrm:5000
+      CORS_ORIGINS: ${CORS_ORIGINS:-*}
+    depends_on:
+      - osrm
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:2
+    command: caddy reverse-proxy --from ${DOMAIN:?set DOMAIN} --to backend:8000
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - caddy_data:/data
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  caddy_data:

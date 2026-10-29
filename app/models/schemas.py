@@ -30,4 +30,5 @@ class RouteResponse(BaseModel):
     violations: List[str]
     coordinates: List[List[float]]
     logs: List[str]
+    perception_source: str = "none"
     execution_time_ms: float

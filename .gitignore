@@ -88,3 +88,8 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Local OSRM routing data
+osrm/
+.venv/
+.route_cache/

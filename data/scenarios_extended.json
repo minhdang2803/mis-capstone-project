@@ -1,0 +1,1076 @@
+[
+  {
+    "id": 1,
+    "title": "Mưa lớn gây ngập sâu đường Quốc Hương - Thảo Điền TP Thủ Đức (tháng 9)",
+    "user_query": "Chỉ đường từ Vincom Mega Mall Thảo Điền sang Thảo Điền Pearl né điểm ngập Quốc Hương",
+    "news_context": "Cơn mưa lớn chiều 10-9 với lượng mưa vượt 100mm làm tuyến đường Quốc Hương ngập sâu, phương tiện di chuyển hết sức khó khăn.",
+    "source_url": "https://ngoisao.vnexpress.net/tp-hcm-tiep-tuc-mua-lon-ba-ngay-toi-5119259.html",
+    "origin": {
+      "name": "Vincom Mega Mall Thảo Điền",
+      "lat": 10.8034,
+      "lon": 106.7381
+    },
+    "destination": {
+      "name": "Thảo Điền Pearl",
+      "lat": 10.804,
+      "lon": 106.732
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Quốc Hương",
+        "lat": 10.8055,
+        "lon": 106.73,
+        "radius_m": 350
+      },
+      {
+        "street": "Xuân Thủy",
+        "lat": 10.8045,
+        "lon": 106.734,
+        "radius_m": 250
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Mưa lớn làm đường Tô Ngọc Vân và chợ Thủ Đức thành sông (tháng 9)",
+    "user_query": "Dẫn đường từ ĐH Sư Phạm Kỹ Thuật về Chợ Thủ Đức tránh đoạn ngập trũng Tô Ngọc Vân",
+    "news_context": "Chiều tối 10-9, mưa lớn biến đường Tô Ngọc Vân và vùng trũng lòng chảo khu vực chợ Thủ Đức thành biển nước.",
+    "source_url": "https://tuoitre.vn/duong-to-ngoc-van.html",
+    "origin": {
+      "name": "Đại học Sư phạm Kỹ thuật TP.HCM",
+      "lat": 10.8507,
+      "lon": 106.7718
+    },
+    "destination": {
+      "name": "Chợ Thủ Đức",
+      "lat": 10.8524,
+      "lon": 106.757
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Tô Ngọc Vân",
+        "lat": 10.858,
+        "lon": 106.755,
+        "radius_m": 350
+      },
+      {
+        "street": "Dương Văn Cam",
+        "lat": 10.8525,
+        "lon": 106.7585,
+        "radius_m": 250
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Nước chảy cuồn cuộn ngã người trên đường Lý Tế Xuyên - Linh Đông (tháng 9)",
+    "user_query": "Tìm đường từ Phạm Văn Đồng sang Kha Vạn Cân né đoạn suối Linh Tây ngập dốc",
+    "news_context": "Mưa lớn chiều tối 18-9 khiến nước từ thượng nguồn suối Linh Tây dồn về làm đường Lý Tế Xuyên và Linh Đông ngập nặng, dòng nước chảy xiết xô ngã người đi xe máy.",
+    "source_url": "https://tuoitre.vn/video/video-nuoc-cuon-cuon-xo-nga-nguoi-di-xe-may-o-phuong-hiep-binh-tphcm-202683.htm",
+    "origin": {
+      "name": "Giao lộ Phạm Văn Đồng - Tô Ngọc Vân",
+      "lat": 10.8601,
+      "lon": 106.7523
+    },
+    "destination": {
+      "name": "Chợ Linh Đông",
+      "lat": 10.849,
+      "lon": 106.754
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Lý Tế Xuyên",
+        "lat": 10.8535,
+        "lon": 106.751,
+        "radius_m": 300
+      },
+      {
+        "street": "Linh Đông",
+        "lat": 10.852,
+        "lon": 106.7525,
+        "radius_m": 250
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Mưa to 15 phút gây ngập đường Bình Chiểu (tháng 9)",
+    "user_query": "Tìm tuyến đường di chuyển từ KCN Sóng Thần về Quốc lộ 1A tránh ngập Bình Chiểu",
+    "news_context": "Trưa 20-9, cơn mưa nặng hạt chỉ sau 15 phút đã khiến đường Bình Chiểu, phường Tam Bình ngập sâu hơn nửa bánh xe.",
+    "source_url": "https://tuoitre.vn/video/vi-dau-cu-mua-la-nuoc-cuon-cuon-do-ve-duong-ly-te-xuyen-linh-dong-tphcm-202844.htm",
+    "origin": {
+      "name": "KCN Sóng Thần",
+      "lat": 10.887,
+      "lon": 106.745
+    },
+    "destination": {
+      "name": "Cầu vượt Gò Dưa",
+      "lat": 10.8685,
+      "lon": 106.732
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Bình Chiểu",
+        "lat": 10.875,
+        "lon": 106.738,
+        "radius_m": 300
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Mưa đêm làm xe chết máy la liệt trên đường Phan Huy Ích (tháng 9)",
+    "user_query": "Chỉ đường từ Trường Chinh sang Quang Trung né 'rốn ngập' Phan Huy Ích",
+    "news_context": "Mưa lớn kéo dài đến đêm 22-9 kết hợp triều cường làm đường Phan Huy Ích (phường Tân Sơn) ngập sâu, hàng loạt xe máy chết máy la liệt.",
+    "source_url": "https://tuoitre.vn/22h-dem-xe-chet-may-la-liet-tren-duong-phan-huy-ich-nguoi-dan-met-moi-dat-xe-loi-nuoc-ve-nha-100260922223327389.htm",
+    "origin": {
+      "name": "Ngã ba Tây Thạnh - Trường Chinh",
+      "lat": 10.816,
+      "lon": 106.631
+    },
+    "destination": {
+      "name": "Ngã tư Quang Trung - Phan Huy Ích",
+      "lat": 10.8405,
+      "lon": 106.645
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Phan Huy Ích",
+        "lat": 10.832,
+        "lon": 106.638,
+        "radius_m": 450
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Mưa lớn giờ tan tầm ngã tư Hàng Xanh ùn tắc và ngập cục bộ (tháng 9)",
+    "user_query": "Tìm lộ trình từ Cầu Sài Gòn đi Bến xe Miền Đông cũ tránh kẹt xe và ngập tại Hàng Xanh",
+    "news_context": "Cơn mưa chiều tối 22-9 làm nước thoát không kịp trên các tuyến nhánh quanh ngã tư Hàng Xanh và đường Xô Viết Nghệ Tĩnh gây kẹt xe nghiêm trọng.",
+    "source_url": "https://tuoitre.vn/video/mua-lon-chieu-toi-nhieu-tuyen-duong-tphcm-thanh-song-202929.htm",
+    "origin": {
+      "name": "Cầu Sài Gòn",
+      "lat": 10.7995,
+      "lon": 106.723
+    },
+    "destination": {
+      "name": "Bến xe Miền Đông cũ",
+      "lat": 10.8142,
+      "lon": 106.7115
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Xô Viết Nghệ Tĩnh",
+        "lat": 10.8035,
+        "lon": 106.7125,
+        "radius_m": 300
+      },
+      {
+        "street": "Bạch Đằng (Bình Thạnh)",
+        "lat": 10.801,
+        "lon": 106.7065,
+        "radius_m": 250
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Ngập sâu ngã tư Nguyễn Văn Khối - Lê Văn Thọ tại Làng Hoa Gò Vấp (tháng 9)",
+    "user_query": "Dẫn đường từ Đường Thống Nhất sang Công viên Làng Hoa né đoạn trũng Nguyễn Văn Khối",
+    "news_context": "Chiều 25-9, mưa xối xả làm ngập đường Nguyễn Văn Khối và Lê Văn Thọ, học sinh tan trường phải dắt xe lội nước.",
+    "source_url": "https://tuoitre.vn/nga-tu-nguyen-van-khoi-le-van-tho-o-tphcm-bi-ngap-hoc-sinh-dat-xe-loi-nuoc-ve-nha-100260925175324604.htm",
+    "origin": {
+      "name": "Bệnh viện Đa khoa Hồng Đức",
+      "lat": 10.845,
+      "lon": 106.661
+    },
+    "destination": {
+      "name": "Công viên Làng Hoa Gò Vấp",
+      "lat": 10.8415,
+      "lon": 106.654
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Nguyễn Văn Khối",
+        "lat": 10.8418,
+        "lon": 106.653,
+        "radius_m": 350
+      },
+      {
+        "street": "Lê Văn Thọ",
+        "lat": 10.843,
+        "lon": 106.655,
+        "radius_m": 250
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Ngập nặng kỷ lục đường Phan Huy Ích khiến xe buýt chết máy (tháng 9)",
+    "user_query": "Lộ trình xe máy từ KCN Tân Bình sang Gò Vấp né nước dâng Phan Huy Ích",
+    "news_context": "Cơn mưa xối xả tối 30-9 làm đường Phan Huy Ích ngập sâu lịch sử do thi công kênh Tham Lương cản dòng chảy, nước tràn vào khoang khiến xe buýt số 32 chết máy nằm im.",
+    "source_url": "https://tuoitre.vn/duong-phan-huy-ich-ngap-nang-ky-luc-nuoc-tran-vao-khien-xe-buyt-chet-may-la-liet-10026093021260881.htm",
+    "origin": {
+      "name": "KCN Tân Bình",
+      "lat": 10.817,
+      "lon": 106.623
+    },
+    "destination": {
+      "name": "Ngã tư An Sương",
+      "lat": 10.8465,
+      "lon": 106.6175
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Phan Huy Ích",
+        "lat": 10.8315,
+        "lon": 106.6375,
+        "radius_m": 500
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Nước rạch tràn bờ nhấn chìm khu dân cư đường số 11 phường Thủ Đức (tháng 9)",
+    "user_query": "Chỉ đường từ ĐH Ngân Hàng TP.HCM đến chợ Linh Tây tránh đường số 11",
+    "news_context": "Khuya 30-9, nước từ rạch Thủ Đức bất ngờ ùa vào làm đường số 11 ngập sâu hơn 1m, hàng trăm hộ dân phải thức trắng đêm sơ tán tài sản.",
+    "source_url": "https://tuoitre.vn/nguyen-nhan-nao-khien-khu-dan-cu-duong-so-11-phuong-thu-duc-ngap-nang-10026100416210625.htm",
+    "origin": {
+      "name": "Đại học Ngân Hàng TP.HCM",
+      "lat": 10.8575,
+      "lon": 106.7645
+    },
+    "destination": {
+      "name": "Chợ Linh Tây",
+      "lat": 10.855,
+      "lon": 106.753
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Đường số 11 (Linh Tây)",
+        "lat": 10.854,
+        "lon": 106.7555,
+        "radius_m": 350
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Ung Văn Khiêm ngập nửa bánh xe, kẹt xe không lối thoát (tháng 10)",
+    "user_query": "Tìm tuyến đường từ Landmark 81 sang Cầu Bình Triệu né tê liệt Ung Văn Khiêm",
+    "news_context": "Tối 1-10, mưa to kết hợp triều dâng khiến đường Ung Văn Khiêm ngập sâu, người dân chôn chân mất gần một tiếng đồng hồ mới nhích được 200m.",
+    "source_url": "https://tuoitre.vn/duong-ung-van-khiem-ket-1-tieng-di-duoc-200m-vong-xoay-nguyen-thai-son-chay-vao-la-chon-chan-10026100120154963.htm",
+    "origin": {
+      "name": "Landmark 81",
+      "lat": 10.7951,
+      "lon": 106.7218
+    },
+    "destination": {
+      "name": "Cầu Bình Triệu",
+      "lat": 10.8175,
+      "lon": 106.713
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Ung Văn Khiêm",
+        "lat": 10.8058,
+        "lon": 106.7156,
+        "radius_m": 400
+      },
+      {
+        "street": "Nguyễn Gia Trí",
+        "lat": 10.803,
+        "lon": 106.714,
+        "radius_m": 250
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Mưa tạnh nhưng nước vẫn ngập dâng cao tại Phan Huy Ích (tháng 10)",
+    "user_query": "Chỉ đường né điểm ứ nước kênh Hy Vọng - Phan Huy Ích",
+    "news_context": "Tối 1-10, dù mưa đã ngớt nhưng do triều cường kênh Tham Lương dâng ngược, đường Phan Huy Ích tiếp tục ngập sâu qua yên xe.",
+    "source_url": "https://tuoitre.vn/duong-phan-huy-ich-ngap-sau-bat-thuong-da-thay-nguyen-nhan-dang-tap-trung-xu-ly-100261002151227903.htm",
+    "origin": {
+      "name": "Cầu Tham Lương",
+      "lat": 10.826,
+      "lon": 106.628
+    },
+    "destination": {
+      "name": "Ngã tư Phạm Văn Chiêu - Lê Văn Thọ",
+      "lat": 10.851,
+      "lon": 106.649
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Phan Huy Ích",
+        "lat": 10.833,
+        "lon": 106.639,
+        "radius_m": 400
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Mưa 30 phút đường Mã Lò ngập nửa bánh xe (tháng 10)",
+    "user_query": "Tìm lộ trình từ Tên Lửa sang Lê Văn Quới tránh đoạn ngập Mã Lò",
+    "news_context": "Đến khuya 5-10, đường Mã Lò đoạn qua phường Bình Trị Đông vẫn ngập sâu sau cơn mưa kéo dài 30 phút, người dân bì bõm dắt xe.",
+    "source_url": "https://tuoitre.vn/mua-ngap-e1535.htm",
+    "origin": {
+      "name": "Aeon Mall Bình Tân",
+      "lat": 10.7432,
+      "lon": 106.6125
+    },
+    "destination": {
+      "name": "Ngã tư Bốn Xã",
+      "lat": 10.768,
+      "lon": 106.621
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Mã Lò",
+        "lat": 10.762,
+        "lon": 106.6095,
+        "radius_m": 350
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Mưa trưa gây ngập đường Bùi Viện và Lê Lợi Quận 1 (tháng 10)",
+    "user_query": "Chỉ đường từ Chợ Bến Thành đi Phố đi bộ Nguyễn Huệ tránh đọng nước Lê Lợi",
+    "news_context": "Trưa 6-10, cơn mưa bất chợt khiến một số trục đường trung tâm như Lê Lợi và phố Tây Bùi Viện bị ứ nước ngập cục bộ.",
+    "source_url": "https://tuoitre.vn/mua-ngap-e1535.htm",
+    "origin": {
+      "name": "Chợ Bến Thành",
+      "lat": 10.7725,
+      "lon": 106.698
+    },
+    "destination": {
+      "name": "Phố đi bộ Nguyễn Huệ",
+      "lat": 10.774,
+      "lon": 106.7035
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Lê Lợi",
+        "lat": 10.7735,
+        "lon": 106.7,
+        "radius_m": 150
+      },
+      {
+        "street": "Bùi Viện",
+        "lat": 10.7675,
+        "lon": 106.693,
+        "radius_m": 150
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Đường trục Nguyễn Thái Sơn - Nguyễn Oanh Gò Vấp ngập giờ tan tầm (tháng 10)",
+    "user_query": "Tìm đường từ Vòng xoay Phạm Văn Đồng về Cầu An Lộc né ngập Nguyễn Oanh",
+    "news_context": "Chiều tối 7-10, mưa lớn kéo dài giờ cao điểm khiến đường Nguyễn Thái Sơn và Nguyễn Oanh ngập sâu, giao thông kẹt cứng kéo dài.",
+    "source_url": "https://tuoitre.vn/video/video-mua-lon-luc-chieu-toi-nhieu-tuyen-duong-trung-tam-tphcm-ngap-nuoc-ket-xe-203323.htm",
+    "origin": {
+      "name": "Công viên Gia Định",
+      "lat": 10.814,
+      "lon": 106.678
+    },
+    "destination": {
+      "name": "Cầu An Lộc",
+      "lat": 10.852,
+      "lon": 106.678
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Nguyễn Thái Sơn",
+        "lat": 10.825,
+        "lon": 106.685,
+        "radius_m": 300
+      },
+      {
+        "street": "Nguyễn Oanh",
+        "lat": 10.836,
+        "lon": 106.678,
+        "radius_m": 300
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Tầng hầm biệt thự CityLand Gò Vấp ngập sâu hơn 1m (tháng 10)",
+    "user_query": "Chỉ đường xe hơi tránh khu vực ngập tràn KĐT CityLand Park Hills",
+    "news_context": "Sau trận mưa xối xả chiều tối 7-10, hệ thống thoát nước quá tải khiến nước tràn vào làm nhiều hầm biệt thự CityLand ngập sâu hơn 1m.",
+    "source_url": "https://tuoitre.vn/biet-thu-cityland-ngap-tang-ham-hon-1m-sau-mua-lon-nguoi-dan-boi-vao-cuu-do-100261008110113722.htm",
+    "origin": {
+      "name": "Lotte Mart Gò Vấp",
+      "lat": 10.832,
+      "lon": 106.673
+    },
+    "destination": {
+      "name": "UBND Quận Gò Vấp cũ",
+      "lat": 10.839,
+      "lon": 106.666
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Khu đô thị CityLand (Đường số 7)",
+        "lat": 10.8305,
+        "lon": 106.671,
+        "radius_m": 300
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Mưa rỉ rả cả đêm làm Nguyễn Văn Khối chìm trong biển nước (tháng 10)",
+    "user_query": "Dẫn đường từ Đường số 9 sang Quang Trung né đoạn trũng Nguyễn Văn Khối",
+    "news_context": "Sáng 8-10, mưa kéo dài từ đêm khiến toàn tuyến đường Nguyễn Văn Khối ngập mênh mông, nhiều xe máy chết máy la liệt vào giờ đi làm.",
+    "source_url": "https://tuoitre.vn/mua-ca-dem-sang-nay-duong-nguyen-van-khoi-tphcm-nuoc-ngap-menh-mong-10026100808374636.htm",
+    "origin": {
+      "name": "Chợ Hạnh Thông Tây",
+      "lat": 10.836,
+      "lon": 106.658
+    },
+    "destination": {
+      "name": "Trường THPT Nguyễn Công Trứ",
+      "lat": 10.849,
+      "lon": 106.657
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Nguyễn Văn Khối",
+        "lat": 10.8415,
+        "lon": 106.6535,
+        "radius_m": 400
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Triều cường 1,71m tràn ngập đường Nguyễn Bình Nhà Bè (tháng 10)",
+    "user_query": "Tìm đường từ Cầu Mương Chuối đi Cần Giờ tránh đoạn ngập Nguyễn Bình",
+    "news_context": "Chiều 10-10, đỉnh triều 1,71m dâng nhanh khiến đường Nguyễn Bình ngập gần lút bánh xe máy, người dân bì bõm dắt xe.",
+    "source_url": "https://tuoitre.vn/trieu-cuong-171m-nhieu-tuyen-duong-tphcm-ngap-gan-lut-banh-xe-100261010150026581.htm",
+    "origin": {
+      "name": "UBND Huyện Nhà Bè cũ",
+      "lat": 10.695,
+      "lon": 106.726
+    },
+    "destination": {
+      "name": "Phà Bình Khánh",
+      "lat": 10.669,
+      "lon": 106.757
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Nguyễn Bình",
+        "lat": 10.687,
+        "lon": 106.735,
+        "radius_m": 400
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Triều cường dâng sóng trên đường Bình Quới Thanh Đa (tháng 10)",
+    "user_query": "Tìm tuyến đường vào Bán đảo Thanh Đa không qua đoạn ngập bờ kè Bình Quới",
+    "news_context": "Chiều tối 10-10 và 11-10, nước sông Sài Gòn tràn qua bờ kè Thanh Đa làm ngập sâu toàn tuyến đường Bình Quới.",
+    "source_url": "https://tuoitre.vn/trieu-cuong-171m-nhieu-tuyen-duong-tphcm-ngap-gan-lut-banh-xe-100261010150026581.htm",
+    "origin": {
+      "name": "Cầu Kinh Thanh Đa",
+      "lat": 10.817,
+      "lon": 106.721
+    },
+    "destination": {
+      "name": "Bến đò Bình Quới",
+      "lat": 10.835,
+      "lon": 106.745
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Bình Quới",
+        "lat": 10.824,
+        "lon": 106.732,
+        "radius_m": 450
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Triều cường vượt báo động 3 tràn ngập đường Trần Xuân Soạn (tháng 10)",
+    "user_query": "Chỉ đường từ Tân Thuận sang Cầu Rạch Ông né ngập bờ kênh Trần Xuân Soạn",
+    "news_context": "Triều cường ngày 11 và 12-10 dâng cao làm nước kênh Tẻ tràn qua bờ kè, gây ngập lút bánh xe đoạn từ Huỳnh Tấn Phát đến Lâm Văn Bền.",
+    "source_url": "https://tuoitre.vn/trieu-cuong-lai-dang-len-tai-nhieu-noi-o-tphcm-nhung-tuyen-duong-nao-can-tranh-100261012171852914.htm",
+    "origin": {
+      "name": "Khu chế xuất Tân Thuận",
+      "lat": 10.763,
+      "lon": 106.731
+    },
+    "destination": {
+      "name": "Cầu Rạch Ông",
+      "lat": 10.751,
+      "lon": 106.685
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Trần Xuân Soạn",
+        "lat": 10.7523,
+        "lon": 106.7088,
+        "radius_m": 500
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Triều cường nhấn chìm rốn ngập đường Đào Sư Tích Nhà Bè (tháng 10)",
+    "user_query": "Tìm lối đi an toàn từ Lê Văn Lương về Phước Lộc tránh ngập sâu Đào Sư Tích",
+    "news_context": "Chiều 12-10, đợt triều cường đầu tháng 9 âm lịch dâng cao làm đường Đào Sư Tích ngập trắng băng, công nhân tan ca phải vật lộn lội nước.",
+    "source_url": "https://dantri.com.vn/thoi-su/tan-ca-chua-kip-nau-com-cong-nhan-lai-vat-lon-voi-trieu-cuong-20261012201205531.htm",
+    "origin": {
+      "name": "Cầu Long Kiểng mới",
+      "lat": 10.7125,
+      "lon": 106.7045
+    },
+    "destination": {
+      "name": "UBND Xã Phước Lộc",
+      "lat": 10.701,
+      "lon": 106.681
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Đào Sư Tích",
+        "lat": 10.705,
+        "lon": 106.698,
+        "radius_m": 400
+      },
+      {
+        "street": "Lê Văn Lương",
+        "lat": 10.708,
+        "lon": 106.703,
+        "radius_m": 350
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "[Synthetic] Mưa lớn kéo dài gây ngập đường Quang Trung (Quận Gò Vấp)",
+    "user_query": "Chỉ đường đi qua khu vực Quang Trung và né điểm ngập",
+    "news_context": "Do mưa lớn kéo dài, tuyến đường Quang Trung (Đoạn Chợ Cầu) thuộc Quận Gò Vấp đang ngập sâu, phương tiện di chuyển khó khăn.",
+    "source_type": "synthetic",
+    "source_url": null,
+    "origin": {
+      "name": "Điểm đi gần Quang Trung",
+      "lat": 10.84355,
+      "lon": 106.65005
+    },
+    "destination": {
+      "name": "Điểm đến sau Quang Trung",
+      "lat": 10.83388,
+      "lon": 106.6668
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Quang Trung",
+        "lat": 10.839,
+        "lon": 106.658,
+        "radius_m": 400.0
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "[Synthetic] Mưa lớn kéo dài gây ngập đường Bạch Đằng (Quận Bình Thạnh)",
+    "user_query": "Chỉ đường đi qua khu vực Bạch Đằng và né điểm ngập",
+    "news_context": "Do mưa lớn kéo dài, tuyến đường Bạch Đằng (Đoạn Chợ Bà Chiểu) thuộc Quận Bình Thạnh đang ngập sâu, phương tiện di chuyển khó khăn.",
+    "source_type": "synthetic",
+    "source_url": null,
+    "origin": {
+      "name": "Điểm đi gần Bạch Đằng",
+      "lat": 10.80511,
+      "lon": 106.71116
+    },
+    "destination": {
+      "name": "Điểm đến sau Bạch Đằng",
+      "lat": 10.7975,
+      "lon": 106.70242
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Bạch Đằng",
+        "lat": 10.801,
+        "lon": 106.7065,
+        "radius_m": 250.0
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "[Synthetic] Triều cường dâng cao gây ngập đường Hậu Giang (Quận 6)",
+    "user_query": "Chỉ đường đi qua khu vực Hậu Giang và né điểm ngập",
+    "news_context": "Do triều cường dâng cao, tuyến đường Hậu Giang (Chân cầu Hậu Giang) thuộc Quận 6 đang ngập sâu, phương tiện di chuyển khó khăn.",
+    "source_type": "synthetic",
+    "source_url": null,
+    "origin": {
+      "name": "Điểm đi gần Hậu Giang",
+      "lat": 10.75493,
+      "lon": 106.64744
+    },
+    "destination": {
+      "name": "Điểm đến sau Hậu Giang",
+      "lat": 10.74659,
+      "lon": 106.63796
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Hậu Giang",
+        "lat": 10.751,
+        "lon": 106.643,
+        "radius_m": 300.0
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "[Synthetic] Mưa lớn kéo dài gây ngập đường Tỉnh Lộ 43 (TP Thủ Đức)",
+    "user_query": "Chỉ đường đi qua khu vực Tỉnh Lộ 43 và né điểm ngập",
+    "news_context": "Do mưa lớn kéo dài, tuyến đường Tỉnh Lộ 43 (Đoạn giáp ranh Bình Dương) thuộc TP Thủ Đức đang ngập sâu, phương tiện di chuyển khó khăn.",
+    "source_type": "synthetic",
+    "source_url": null,
+    "origin": {
+      "name": "Điểm đi gần Tỉnh Lộ 43",
+      "lat": 10.88525,
+      "lon": 106.74168
+    },
+    "destination": {
+      "name": "Điểm đến sau Tỉnh Lộ 43",
+      "lat": 10.8708,
+      "lon": 106.74835
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Tỉnh Lộ 43",
+        "lat": 10.878,
+        "lon": 106.745,
+        "radius_m": 400.0
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "[Synthetic] Mưa lớn kéo dài gây ngập đường Lương Định Của (TP Thủ Đức)",
+    "user_query": "Chỉ đường đi qua khu vực Lương Định Của và né điểm ngập",
+    "news_context": "Do mưa lớn kéo dài, tuyến đường Lương Định Của (Đoạn nút giao An Phú) thuộc TP Thủ Đức đang ngập sâu, phương tiện di chuyển khó khăn.",
+    "source_type": "synthetic",
+    "source_url": null,
+    "origin": {
+      "name": "Điểm đi gần Lương Định Của",
+      "lat": 10.79565,
+      "lon": 106.73808
+    },
+    "destination": {
+      "name": "Điểm đến sau Lương Định Của",
+      "lat": 10.78482,
+      "lon": 106.72332
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Lương Định Của",
+        "lat": 10.791,
+        "lon": 106.732,
+        "radius_m": 400.0
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "[Synthetic] Triều cường dâng cao gây ngập đường Mễ Cốc (Quận 8)",
+    "user_query": "Chỉ đường đi qua khu vực Mễ Cốc và né điểm ngập",
+    "news_context": "Do triều cường dâng cao, tuyến đường Mễ Cốc (Rốn ngập bờ kè Bến Mễ Cốc) thuộc Quận 8 đang ngập sâu, phương tiện di chuyển khó khăn.",
+    "source_type": "synthetic",
+    "source_url": null,
+    "origin": {
+      "name": "Điểm đi gần Mễ Cốc",
+      "lat": 10.73785,
+      "lon": 106.63566
+    },
+    "destination": {
+      "name": "Điểm đến sau Mễ Cốc",
+      "lat": 10.71625,
+      "lon": 106.63231
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Mễ Cốc",
+        "lat": 10.727,
+        "lon": 106.634,
+        "radius_m": 450.0
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "title": "[Synthetic] Triều cường dâng cao gây ngập đường Lương Ngọc Quyến (Quận 8)",
+    "user_query": "Chỉ đường đi qua khu vực Lương Ngọc Quyến và né điểm ngập",
+    "news_context": "Do triều cường dâng cao, tuyến đường Lương Ngọc Quyến (Khu vực Bến Bình Đông) thuộc Quận 8 đang ngập sâu, phương tiện di chuyển khó khăn.",
+    "source_type": "synthetic",
+    "source_url": null,
+    "origin": {
+      "name": "Điểm đi gần Lương Ngọc Quyến",
+      "lat": 10.73093,
+      "lon": 106.63817
+    },
+    "destination": {
+      "name": "Điểm đến sau Lương Ngọc Quyến",
+      "lat": 10.71711,
+      "lon": 106.63496
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Lương Ngọc Quyến",
+        "lat": 10.7245,
+        "lon": 106.637,
+        "radius_m": 300.0
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "title": "[Synthetic] Mưa lớn kéo dài gây ngập đường Trương Công Định (Quận Tân Bình)",
+    "user_query": "Chỉ đường đi qua khu vực Trương Công Định và né điểm ngập",
+    "news_context": "Do mưa lớn kéo dài, tuyến đường Trương Công Định (Đoạn giao Ba Vân) thuộc Quận Tân Bình đang ngập sâu, phương tiện di chuyển khó khăn.",
+    "source_type": "synthetic",
+    "source_url": null,
+    "origin": {
+      "name": "Điểm đi gần Trương Công Định",
+      "lat": 10.80039,
+      "lon": 106.64006
+    },
+    "destination": {
+      "name": "Điểm đến sau Trương Công Định",
+      "lat": 10.79127,
+      "lon": 106.64827
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Trương Công Định",
+        "lat": 10.796,
+        "lon": 106.644,
+        "radius_m": 250.0
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "title": "[Synthetic] Mưa lớn kéo dài gây ngập đường Đỗ Xuân Hợp (TP Thủ Đức)",
+    "user_query": "Chỉ đường đi qua khu vực Đỗ Xuân Hợp và né điểm ngập",
+    "news_context": "Do mưa lớn kéo dài, tuyến đường Đỗ Xuân Hợp (Đoạn chân cầu Nam Lý) thuộc TP Thủ Đức đang ngập sâu, phương tiện di chuyển khó khăn.",
+    "source_type": "synthetic",
+    "source_url": null,
+    "origin": {
+      "name": "Điểm đi gần Đỗ Xuân Hợp",
+      "lat": 10.81258,
+      "lon": 106.76615
+    },
+    "destination": {
+      "name": "Điểm đến sau Đỗ Xuân Hợp",
+      "lat": 10.81207,
+      "lon": 106.78282
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Đỗ Xuân Hợp",
+        "lat": 10.812,
+        "lon": 106.775,
+        "radius_m": 350.0
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "title": "[Synthetic] Mưa lớn kéo dài gây ngập đường Võ Văn Ngân (TP Thủ Đức)",
+    "user_query": "Chỉ đường đi qua khu vực Võ Văn Ngân và né điểm ngập",
+    "news_context": "Do mưa lớn kéo dài, tuyến đường Võ Văn Ngân (Dốc Chợ Thủ Đức đến Nhà thiếu nhi) thuộc TP Thủ Đức đang ngập sâu, phương tiện di chuyển khó khăn.",
+    "source_type": "synthetic",
+    "source_url": null,
+    "origin": {
+      "name": "Điểm đi gần Võ Văn Ngân",
+      "lat": 10.85693,
+      "lon": 106.75772
+    },
+    "destination": {
+      "name": "Điểm đến sau Võ Văn Ngân",
+      "lat": 10.84367,
+      "lon": 106.75839
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Võ Văn Ngân",
+        "lat": 10.8505,
+        "lon": 106.758,
+        "radius_m": 350.0
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "title": "[Synthetic] Mưa lớn kéo dài gây ngập đường Đồng Đen (Quận Tân Bình)",
+    "user_query": "Chỉ đường đi qua khu vực Đồng Đen và né điểm ngập",
+    "news_context": "Do mưa lớn kéo dài, tuyến đường Đồng Đen (Khu Bàu Cát) thuộc Quận Tân Bình đang ngập sâu, phương tiện di chuyển khó khăn.",
+    "source_type": "synthetic",
+    "source_url": null,
+    "origin": {
+      "name": "Điểm đi gần Đồng Đen",
+      "lat": 10.80002,
+      "lon": 106.64898
+    },
+    "destination": {
+      "name": "Điểm đến sau Đồng Đen",
+      "lat": 10.7873,
+      "lon": 106.64183
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Đồng Đen",
+        "lat": 10.793,
+        "lon": 106.645,
+        "radius_m": 300.0
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "title": "[Synthetic] Mưa lớn kéo dài gây ngập đường Hòa Bình (Quận Tân Phú)",
+    "user_query": "Chỉ đường đi qua khu vực Hòa Bình và né điểm ngập",
+    "news_context": "Do mưa lớn kéo dài, tuyến đường Hòa Bình (Cổng sau Công viên Đầm Sen) thuộc Quận Tân Phú đang ngập sâu, phương tiện di chuyển khó khăn.",
+    "source_type": "synthetic",
+    "source_url": null,
+    "origin": {
+      "name": "Điểm đi gần Hòa Bình",
+      "lat": 10.77335,
+      "lon": 106.64378
+    },
+    "destination": {
+      "name": "Điểm đến sau Hòa Bình",
+      "lat": 10.76396,
+      "lon": 106.63222
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Hòa Bình",
+        "lat": 10.7695,
+        "lon": 106.639,
+        "radius_m": 350.0
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "title": "[Synthetic] Mưa lớn kéo dài gây ngập đường Kinh Dương Vương (Quận Bình Tân)",
+    "user_query": "Chỉ đường đi qua khu vực Kinh Dương Vương và né điểm ngập",
+    "news_context": "Do mưa lớn kéo dài, tuyến đường Kinh Dương Vương (Đoạn Mũi Tàu / Bến xe Miền Tây) thuộc Quận Bình Tân đang ngập sâu, phương tiện di chuyển khó khăn.",
+    "source_type": "synthetic",
+    "source_url": null,
+    "origin": {
+      "name": "Điểm đi gần Kinh Dương Vương",
+      "lat": 10.7556,
+      "lon": 106.62628
+    },
+    "destination": {
+      "name": "Điểm đến sau Kinh Dương Vương",
+      "lat": 10.74154,
+      "lon": 106.60993
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Kinh Dương Vương",
+        "lat": 10.7485,
+        "lon": 106.618,
+        "radius_m": 450.0
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "title": "[Synthetic] Mưa lớn kéo dài gây ngập đường Lê Đức Thọ (Quận Gò Vấp)",
+    "user_query": "Chỉ đường đi qua khu vực Lê Đức Thọ và né điểm ngập",
+    "news_context": "Do mưa lớn kéo dài, tuyến đường Lê Đức Thọ (Đoạn Ngã ba Cây Trâm) thuộc Quận Gò Vấp đang ngập sâu, phương tiện di chuyển khó khăn.",
+    "source_type": "synthetic",
+    "source_url": null,
+    "origin": {
+      "name": "Điểm đi gần Lê Đức Thọ",
+      "lat": 10.849,
+      "lon": 106.67588
+    },
+    "destination": {
+      "name": "Điểm đến sau Lê Đức Thọ",
+      "lat": 10.84554,
+      "lon": 106.66026
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Lê Đức Thọ",
+        "lat": 10.8475,
+        "lon": 106.669,
+        "radius_m": 350.0
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "title": "[Synthetic] Triều cường dâng cao gây ngập đường Hồ Thành Biên (Quận 8)",
+    "user_query": "Chỉ đường đi qua khu vực Hồ Thành Biên và né điểm ngập",
+    "news_context": "Do triều cường dâng cao, tuyến đường Hồ Thành Biên (Đoạn Rạch Ông Lớn) thuộc Quận 8 đang ngập sâu, phương tiện di chuyển khó khăn.",
+    "source_type": "synthetic",
+    "source_url": null,
+    "origin": {
+      "name": "Điểm đi gần Hồ Thành Biên",
+      "lat": 10.74494,
+      "lon": 106.68544
+    },
+    "destination": {
+      "name": "Điểm đến sau Hồ Thành Biên",
+      "lat": 10.73576,
+      "lon": 106.67374
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Hồ Thành Biên",
+        "lat": 10.7415,
+        "lon": 106.681,
+        "radius_m": 250.0
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "title": "[Synthetic] Mưa lớn kéo dài gây ngập đường Mai Văn Vĩnh (Quận 7)",
+    "user_query": "Chỉ đường đi qua khu vực Mai Văn Vĩnh và né điểm ngập",
+    "news_context": "Do mưa lớn kéo dài, tuyến đường Mai Văn Vĩnh (Đoạn giao Nguyễn Thị Thập) thuộc Quận 7 đang ngập sâu, phương tiện di chuyển khó khăn.",
+    "source_type": "synthetic",
+    "source_url": null,
+    "origin": {
+      "name": "Điểm đi gần Mai Văn Vĩnh",
+      "lat": 10.75179,
+      "lon": 106.70536
+    },
+    "destination": {
+      "name": "Điểm đến sau Mai Văn Vĩnh",
+      "lat": 10.73831,
+      "lon": 106.71756
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Mai Văn Vĩnh",
+        "lat": 10.746,
+        "lon": 106.711,
+        "radius_m": 300.0
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "title": "[Synthetic] Mưa lớn kéo dài gây ngập đường Lê Văn Việt (TP Thủ Đức)",
+    "user_query": "Chỉ đường đi qua khu vực Lê Văn Việt và né điểm ngập",
+    "news_context": "Do mưa lớn kéo dài, tuyến đường Lê Văn Việt (Đoạn ngã tư Thủ Đức) thuộc TP Thủ Đức đang ngập sâu, phương tiện di chuyển khó khăn.",
+    "source_type": "synthetic",
+    "source_url": null,
+    "origin": {
+      "name": "Điểm đi gần Lê Văn Việt",
+      "lat": 10.84809,
+      "lon": 106.78503
+    },
+    "destination": {
+      "name": "Điểm đến sau Lê Văn Việt",
+      "lat": 10.84384,
+      "lon": 106.77137
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Lê Văn Việt",
+        "lat": 10.846,
+        "lon": 106.778,
+        "radius_m": 300.0
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "title": "[Synthetic] Mưa lớn kéo dài gây ngập đường Bà Hom (Quận 6)",
+    "user_query": "Chỉ đường đi qua khu vực Bà Hom và né điểm ngập",
+    "news_context": "Do mưa lớn kéo dài, tuyến đường Bà Hom (Khu vực Chợ Cây Da Sà) thuộc Quận 6 đang ngập sâu, phương tiện di chuyển khó khăn.",
+    "source_type": "synthetic",
+    "source_url": null,
+    "origin": {
+      "name": "Điểm đi gần Bà Hom",
+      "lat": 10.76074,
+      "lon": 106.61898
+    },
+    "destination": {
+      "name": "Điểm đến sau Bà Hom",
+      "lat": 10.75537,
+      "lon": 106.63088
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Bà Hom",
+        "lat": 10.758,
+        "lon": 106.625,
+        "radius_m": 300.0
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "title": "[Synthetic] Mưa lớn kéo dài gây ngập đường Phạm Văn Chiêu (Quận Gò Vấp)",
+    "user_query": "Chỉ đường đi qua khu vực Phạm Văn Chiêu và né điểm ngập",
+    "news_context": "Do mưa lớn kéo dài, tuyến đường Phạm Văn Chiêu (Đoạn trước Trường THCS Lam Sơn) thuộc Quận Gò Vấp đang ngập sâu, phương tiện di chuyển khó khăn.",
+    "source_type": "synthetic",
+    "source_url": null,
+    "origin": {
+      "name": "Điểm đi gần Phạm Văn Chiêu",
+      "lat": 10.85544,
+      "lon": 106.65856
+    },
+    "destination": {
+      "name": "Điểm đến sau Phạm Văn Chiêu",
+      "lat": 10.84265,
+      "lon": 106.64539
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Phạm Văn Chiêu",
+        "lat": 10.849,
+        "lon": 106.652,
+        "radius_m": 400.0
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "title": "[Synthetic] Mưa lớn kéo dài gây ngập đường Kha Vạn Cân (TP Thủ Đức)",
+    "user_query": "Chỉ đường đi qua khu vực Kha Vạn Cân và né điểm ngập",
+    "news_context": "Do mưa lớn kéo dài, tuyến đường Kha Vạn Cân (Đoạn Cầu Ngang Chợ Thủ Đức) thuộc TP Thủ Đức đang ngập sâu, phương tiện di chuyển khó khăn.",
+    "source_type": "synthetic",
+    "source_url": null,
+    "origin": {
+      "name": "Điểm đi gần Kha Vạn Cân",
+      "lat": 10.85989,
+      "lon": 106.75848
+    },
+    "destination": {
+      "name": "Điểm đến sau Kha Vạn Cân",
+      "lat": 10.84369,
+      "lon": 106.7543
+    },
+    "ground_truth_hazards": [
+      {
+        "street": "Kha Vạn Cân",
+        "lat": 10.8515,
+        "lon": 106.7565,
+        "radius_m": 350.0
+      }
+    ]
+  }
+]

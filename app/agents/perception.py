@@ -5,7 +5,12 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 
 from app.core.settings import settings
 from app.models.state import AgentState
-from app.services.geocoding_service import HCMC_STREET_GAZETTEER, geocode_street
+from app.services.llm import LLMDailyQuotaExhausted, invoke_with_retry
+from app.services.geocoding_service import HCMC_STREET_GAZETTEER, geocode_street, name_in_text
+
+
+class PerceptionError(RuntimeError):
+    """Raised in strict mode when the LLM extraction cannot be used."""
 
 
 # class schemas về thông tin của các địa điểm ngập lụt được Gemini tổng hợp từ internet
@@ -56,15 +61,26 @@ class FloodNewsExtraction(BaseModel):
 def traffic_perception_agent(state: AgentState) -> AgentState:
     """
     Traffic Perception Agent (Master/Perception Agent):
-    Uses Gemini LLM (gemini-2.5-flash) with structured entity extraction to parse unstructured
+    Uses Gemini LLM (settings.GEMINI_MODEL) with structured entity extraction to parse unstructured
     Vietnamese news text, extract flood hazards (street, ward, district, depth, time), and geocode them into spatial avoid_points.
     """
     logs = state.get("logs", [])
     logs.append("[1. Perception Agent] Parsing news_context with Gemini Flash...")
 
     news_text = state["news_context"]
+    strict = state.get("strict_perception", False)
     detected_hazards: List[Dict[str, Any]] = []
     llm_succeeded = False
+    state["perception_source"] = "none"
+
+    if not news_text.strip():
+        state["perceived_hazards"] = []
+        state["avoid_points"] = []
+        logs.append("  [!] Warning: Empty news_context, nothing to extract.")
+        return state
+
+    if strict and not settings.GOOGLE_API_KEY:
+        raise PerceptionError("strict perception requires GOOGLE_API_KEY / GEMINI_API_KEY")
 
     # 1. Attempt LLM Structured Extraction via Gemini Flash
     if settings.GOOGLE_API_KEY:
@@ -87,14 +103,15 @@ def traffic_perception_agent(state: AgentState) -> AgentState:
                 "- time_window: Khung giờ, buổi hoặc ngày xảy ra ngập (ví dụ: '17h30', 'chiều 19/10', 'giờ cao điểm tan tầm').\n"
                 "- severity: Mức độ ngập ('ngập sâu', 'ngập nửa bánh xe', 'ngập nhẹ', 'tê liệt').\n"
                 "- reason: Nguyên nhân ngập nếu có ('triều cường dâng cao', 'mưa lớn kéo dài').\n\n"
-                "Hãy đảm bảo rằng những thông tin bạn đọc có nguồn gốc và có đường link có thể truy cập được.\n\n"
                 "Lưu ý: Chỉ trích xuất thông tin có thực trong văn bản, không tự bịa thêm tên đường hay số đo.\n\n"
                 f"--- BẢN TIN NGẬP LỤT ---\n{news_text}\n------------------------\n"
             )
-            extraction_result: FloodNewsExtraction = structured_extractor.invoke(prompt)
+            extraction_result: FloodNewsExtraction = invoke_with_retry(structured_extractor.invoke, prompt)
 
             for item in extraction_result.hazards:
                 geo_info = geocode_street(item.street, ward=item.ward, district=item.district)
+                if geo_info is None:
+                    logs.append(f"  -> [Geocoding] Could not locate '{item.street}' reliably; hazard skipped.")
                 if geo_info and not any(
                     h["street"].lower() == geo_info["street"].lower()
                     for h in detected_hazards
@@ -114,16 +131,21 @@ def traffic_perception_agent(state: AgentState) -> AgentState:
                         f"(depth={item.depth_cm}cm, time={item.time_window}, severity={item.severity}, reason={item.reason or '-'})"
                     )
             llm_succeeded = True
+            state["perception_source"] = "gemini"
+        except LLMDailyQuotaExhausted:
+            raise  # never mask a spent daily quota as a gazetteer result
         except Exception as e:
+            if strict:
+                raise PerceptionError(f"Gemini extraction failed in strict mode: {e}") from e
             logs.append(
                 f"  [!] Gemini LLM extraction error: {e}. Falling back to HCMC gazetteer matching..."
             )
 
     # 2. Gazetteer / Rule-based Fallback if LLM failed or is not available
     if not llm_succeeded and not detected_hazards:
-        news_lower = news_text.lower()
+        state["perception_source"] = "gazetteer_fallback"
         for street_key in HCMC_STREET_GAZETTEER.keys():
-            if street_key in news_lower:
+            if name_in_text(street_key, news_text):
                 geo_info = geocode_street(street_key)
                 if geo_info and not any(
                     h["street"].lower() == geo_info["street"].lower()
@@ -137,14 +159,12 @@ def traffic_perception_agent(state: AgentState) -> AgentState:
     state["perceived_hazards"] = detected_hazards
     state["avoid_points"] = detected_hazards
 
-    # 3. Compute Extraction Accuracy
     if detected_hazards:
-        state["extraction_accuracy"] = 1.0
         logs.append(
-            f"  [✓] Perception Complete: {len(detected_hazards)} hazard zones mapped to avoid_points."
+            f"  [✓] Perception Complete ({state['perception_source']}): "
+            f"{len(detected_hazards)} hazard zones mapped to avoid_points."
         )
     else:
-        state["extraction_accuracy"] = 0.0
         logs.append("  [!] Warning: No specific street hazard extracted from context.")
 
     return state

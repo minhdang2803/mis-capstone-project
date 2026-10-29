@@ -1,0 +1,9 @@
+.git
+.env
+.env.*
+venv
+.venv
+osrm
+.route_cache
+__pycache__
+tests

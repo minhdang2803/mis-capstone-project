@@ -1,0 +1,100 @@
+{
+  "purpose": "Streets named by flood reports for which no trustworthy coordinates were found; add them to hcmc_flood_blackspots.json with coordinates you confirm on a map.",
+  "streets": [
+    {
+      "street": "Chu Văn An",
+      "reason": "Nominatim and Photon disagree",
+      "note": "news: alley off Chu Văn An, Bình Thạnh (VOH 05/08/2025)"
+    },
+    {
+      "street": "Đặng Thùy Trâm",
+      "reason": "Nominatim and Photon disagree without a district hint",
+      "note": "Bình Lợi Trung, Bình Thạnh (SGGP 15/06/2026); earlier geocode with district hint gave ~10.8270,106.7026"
+    },
+    {
+      "street": "Lê Văn Minh",
+      "reason": "no trustworthy result",
+      "note": "TP Thủ Đức (NNMT 10/05/2025)"
+    },
+    {
+      "street": "Phú Thuận",
+      "reason": "no trustworthy result",
+      "note": "Q7, tidal flooding (TPO 05/12/2025)"
+    },
+    {
+      "street": "Tây Hòa",
+      "reason": "no trustworthy result",
+      "note": "TP Thủ Đức (VietnamPlus 20/05/2024)"
+    },
+    {
+      "street": "Thanh Đa",
+      "reason": "no trustworthy result",
+      "note": "Bình Thạnh peninsula, tidal (SGGP 30/10/2025)"
+    },
+    {
+      "street": "Tố Hữu",
+      "reason": "removed after review: geocoded to Tân Uyên (lat 11.07); article means the Thủ Thiêm area",
+      "note": "needs manually confirmed coordinates"
+    },
+    {
+      "street": "Thích Quảng Đức",
+      "reason": "removed after review: geocoded to Phú Nhuận; article means the Thủ Dầu Một (former Bình Dương) street",
+      "note": "needs manually confirmed coordinates"
+    },
+    {
+      "street": "Huỳnh Văn Nghệ",
+      "reason": "removed after review: geocoded to Tân Uyên; article means the Tân Bình / Gò Vấp street",
+      "note": "needs manually confirmed coordinates"
+    },
+    {
+      "street": "Cây Trâm",
+      "reason": "removed after review: geocoded to Thuận An; article means the Gò Vấp street",
+      "note": "needs manually confirmed coordinates"
+    },
+    {
+      "street": "Bình Lợi",
+      "reason": "removed after review: geocoded to a hamlet near Long An; article means the Bình Thạnh street",
+      "note": "needs manually confirmed coordinates"
+    },
+    {
+      "street": "Bùi Minh Trực",
+      "reason": "Removed by user: only Photon confirmed the coordinates (needs_review)",
+      "note": "removed from gazetteer v1.1.0 to favour accuracy; do not re-add via expand_gazetteer.py without review"
+    },
+    {
+      "street": "Đặng Văn Bi",
+      "reason": "Removed by user: only Photon confirmed the coordinates (needs_review)",
+      "note": "removed from gazetteer v1.1.0 to favour accuracy; do not re-add via expand_gazetteer.py without review"
+    },
+    {
+      "street": "Hồ Ngọc Lãm",
+      "reason": "Removed by user: only Photon confirmed the coordinates (needs_review)",
+      "note": "removed from gazetteer v1.1.0 to favour accuracy; do not re-add via expand_gazetteer.py without review"
+    },
+    {
+      "street": "Hồ Văn Cống",
+      "reason": "Removed by user: only Photon confirmed the coordinates (needs_review)",
+      "note": "removed from gazetteer v1.1.0 to favour accuracy; do not re-add via expand_gazetteer.py without review"
+    },
+    {
+      "street": "Hoàng Minh Giám",
+      "reason": "Removed by user: only Photon confirmed the coordinates (needs_review)",
+      "note": "removed from gazetteer v1.1.0 to favour accuracy; do not re-add via expand_gazetteer.py without review"
+    },
+    {
+      "street": "Nguyễn Hữu Thọ",
+      "reason": "Removed by user: only Photon confirmed the coordinates (needs_review)",
+      "note": "removed from gazetteer v1.1.0 to favour accuracy; do not re-add via expand_gazetteer.py without review"
+    },
+    {
+      "street": "Phạm Hữu Lầu",
+      "reason": "Removed by user: only Photon confirmed the coordinates (needs_review)",
+      "note": "removed from gazetteer v1.1.0 to favour accuracy; do not re-add via expand_gazetteer.py without review"
+    },
+    {
+      "street": "Tân Kỳ Tân Quý",
+      "reason": "Removed by user: only Photon confirmed the coordinates (needs_review)",
+      "note": "removed from gazetteer v1.1.0 to favour accuracy; do not re-add via expand_gazetteer.py without review"
+    }
+  ]
+}

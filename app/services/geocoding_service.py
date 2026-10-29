@@ -1,9 +1,23 @@
-import os
+import functools
 import json
+import logging
+import os
 import re
-from typing import Dict, Any, Optional
+import time
+from typing import Dict, Any, List, Optional
 import requests
+from app.core.geometry import haversine_distance
 from app.core.settings import settings
+from app.services.evaluation import normalize_name
+
+logger = logging.getLogger(__name__)
+
+# HCMC and surroundings (min_lat, min_lon, max_lat, max_lon): anything outside is rejected
+HCMC_BBOX = (10.35, 106.35, 11.20, 107.05)
+# Two independent geocoders must land within this distance to count as agreeing
+GEOCODE_AGREE_M = 2000.0
+NOMINATIM_MIN_INTERVAL_S = 1.1  # public Nominatim policy: at most ~1 request per second
+_last_nominatim_call = {"t": 0.0}
 
 # TODO: Tập dữ liệu benchmark cần được thay thế thành một cronjob trong tương lai để lấy dữ liệu near realtime.
 # Đường dẫn tới tệp dữ liệu điểm đen ngập lụt chuẩn hóa tại TP.HCM
@@ -45,6 +59,24 @@ def _load_gazetteer() -> Dict[str, Dict[str, Any]]:
 
 HCMC_STREET_GAZETTEER: Dict[str, Dict[str, Any]] = _load_gazetteer()
 
+def name_in_text(name: str, text: str) -> bool:
+    """Whole-word containment (case-insensitive), so 'bình' does not match 'bình thạnh' or 'bình chiểu'."""
+    return re.search(rf"(?<!\w){re.escape(name.lower())}(?!\w)", text.lower()) is not None
+
+
+def _lookup_gazetteer(clean_name: str) -> Optional[Dict[str, Any]]:
+    """Exact key first, then whole-word containment, preferring the longest (most specific) key."""
+    if clean_name in HCMC_STREET_GAZETTEER:
+        return {"key": clean_name, **HCMC_STREET_GAZETTEER[clean_name]}
+    candidates = [
+        k for k in HCMC_STREET_GAZETTEER if name_in_text(k, clean_name) or name_in_text(clean_name, k)
+    ]
+    if not candidates:
+        return None
+    key = max(candidates, key=len)
+    return {"key": key, **HCMC_STREET_GAZETTEER[key]}
+
+
 def geocode_street(street_name: str, ward: Optional[str] = None, district: Optional[str] = None) -> Optional[Dict[str, Any]]:
     """
     Look up coordinates for a given HCMC street name:
@@ -57,71 +89,118 @@ def geocode_street(street_name: str, ward: Optional[str] = None, district: Optio
         if clean_name.startswith(prefix):
             clean_name = clean_name[len(prefix):].strip()
 
-    for key, data in HCMC_STREET_GAZETTEER.items():
-        if key in clean_name or clean_name in key:
-            return {
-                "street": key.title(),
-                "lat": data["lat"],
-                "lon": data["lon"],
-                "radius_m": data.get("radius_m", settings.DEFAULT_HAZARD_RADIUS_M)
-            }
+    entry = _lookup_gazetteer(clean_name)
+    if entry:
+        return {
+            "street": entry["key"].title(),
+            "lat": entry["lat"],
+            "lon": entry["lon"],
+            "radius_m": entry.get("radius_m", settings.DEFAULT_HAZARD_RADIUS_M),
+            "geocode_source": "gazetteer",
+        }
 
-    # Build contextual query
-    addr_parts = [f"Đường {street_name}"]
+    result = _remote_geocode(street_name, ward, district)
+    if result is None:
+        logger.warning("geocode: no trustworthy coordinates for '%s'", street_name)
+        return None
+    return {**result, "radius_m": settings.DEFAULT_HAZARD_RADIUS_M}
+
+
+def _in_hcmc(lat: float, lon: float) -> bool:
+    return HCMC_BBOX[0] <= lat <= HCMC_BBOX[2] and HCMC_BBOX[1] <= lon <= HCMC_BBOX[3]
+
+
+def _street_name_matches(query: str, found: Optional[str]) -> bool:
+    """The returned feature must carry the queried street name, not just resemble it."""
+    if not found:
+        return False
+    q, f = normalize_name(query), normalize_name(found)
+    return q == f or re.search(rf"(?<!\w){re.escape(q)}(?!\w)", f) is not None
+
+
+def _nominatim_candidates(street_name: str, ward: Optional[str], district: Optional[str]) -> List[Dict[str, float]]:
+    parts = [f"Đường {street_name}"]
     if ward:
-        addr_parts.append(f"Phường {ward}" if not ward.lower().startswith("phường") else ward)
+        parts.append(f"Phường {ward}" if not ward.lower().startswith("phường") else ward)
     if district:
-        addr_parts.append(district)
-    addr_parts.append("Thành phố Hồ Chí Minh, Việt Nam")
-    query_str = ", ".join(addr_parts)
+        parts.append(district)
+    parts.append("Thành phố Hồ Chí Minh, Việt Nam")
 
-    # Fallback 1: OpenStreetMap Nominatim
+    gap = NOMINATIM_MIN_INTERVAL_S - (time.monotonic() - _last_nominatim_call["t"])
+    if gap > 0:
+        time.sleep(gap)
+    _last_nominatim_call["t"] = time.monotonic()
     try:
         resp = requests.get(
             "https://nominatim.openstreetmap.org/search",
             params={
-                "q": query_str,
-                "format": "json",
-                "limit": 1
+                "q": ", ".join(parts), "format": "jsonv2", "limit": 5, "countrycodes": "vn",
+                "viewbox": f"{HCMC_BBOX[1]},{HCMC_BBOX[2]},{HCMC_BBOX[3]},{HCMC_BBOX[0]}", "bounded": 1,
             },
             headers={"User-Agent": "MAS4POI-Capstone/2.0"},
-            timeout=4.0
+            timeout=6.0,
         )
-        if resp.status_code == 200:
-            results = resp.json()
-            if results and len(results) > 0:
-                return {
-                    "street": street_name.title(),
-                    "lat": round(float(results[0]["lat"]), 5),
-                    "lon": round(float(results[0]["lon"]), 5),
-                    "radius_m": settings.DEFAULT_HAZARD_RADIUS_M
-                }
+        items = resp.json() if resp.status_code == 200 else []
     except Exception:
-        pass
+        return []
+    out = []
+    for it in items:
+        lat, lon = float(it["lat"]), float(it["lon"])
+        # must be a road whose own name matches, and lie inside HCMC
+        if it.get("category") == "highway" and _street_name_matches(street_name, it.get("name")) and _in_hcmc(lat, lon):
+            out.append({"lat": lat, "lon": lon, "hint": ", ".join(str(it.get("display_name", "")).split(", ")[:4])})
+    return out
 
-    # Fallback 2: Photon API (Komoot OSM)
+
+def _photon_candidates(street_name: str, ward: Optional[str], district: Optional[str]) -> List[Dict[str, float]]:
     try:
-        photon_q = f"{street_name} {ward or ''} {district or ''} Ho Chi Minh".strip()
         resp = requests.get(
             "https://photon.komoot.io/api/",
-            params={"q": photon_q, "limit": 1},
-            headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"},
-            timeout=4.0
+            params={
+                "q": f"{street_name} {ward or ''} {district or ''} Ho Chi Minh".strip(), "limit": 5,
+                "bbox": f"{HCMC_BBOX[1]},{HCMC_BBOX[0]},{HCMC_BBOX[3]},{HCMC_BBOX[2]}", "osm_tag": "highway",
+            },
+            headers={"User-Agent": "MAS4POI-Capstone/2.0"},
+            timeout=6.0,
         )
-
-        if resp.status_code == 200:
-            features = resp.json().get("features", [])
-            if features:
-                coords = features[0]["geometry"]["coordinates"]  # [lon, lat]
-                return {
-                    "street": street_name.title(),
-                    "lat": round(float(coords[1]), 5),
-                    "lon": round(float(coords[0]), 5),
-                    "radius_m": settings.DEFAULT_HAZARD_RADIUS_M
-                }
+        features = resp.json().get("features", []) if resp.status_code == 200 else []
     except Exception:
-        pass
+        return []
+    out = []
+    for f in features:
+        props = f.get("properties", {})
+        lon, lat = f["geometry"]["coordinates"]
+        if props.get("osm_key") == "highway" and _street_name_matches(street_name, props.get("name")) and _in_hcmc(lat, lon):
+            hint = ", ".join(str(props[k]) for k in ("district", "locality", "city", "state") if props.get(k))
+            out.append({"lat": lat, "lon": lon, "hint": hint})
+    return out
 
-    return None
 
+@functools.lru_cache(maxsize=1024)
+def _remote_geocode(street_name: str, ward: Optional[str], district: Optional[str]) -> Optional[Dict[str, Any]]:
+    """
+    Geocodes through Nominatim and Photon and only trusts a result that is a road with the queried
+    name inside HCMC. When both services answer they must agree (within GEOCODE_AGREE_M); a
+    disagreement or no valid answer yields None rather than a guessed coordinate.
+    """
+    nom = _nominatim_candidates(street_name, ward, district)
+    pho = _photon_candidates(street_name, ward, district)
 
+    best = None
+    for n in nom:
+        for p in pho:
+            d = haversine_distance(n["lat"], n["lon"], p["lat"], p["lon"])
+            if d <= GEOCODE_AGREE_M and (best is None or d < best[0]):
+                best = (d, n, p)
+    if best:
+        _, n, _ = best
+        return {"street": street_name.title(), "lat": round(n["lat"], 5), "lon": round(n["lon"], 5),
+                "geocode_source": "nominatim+photon", "geocode_confidence": "agreed", "address_hint": n.get("hint", "")}
+    if nom and pho:
+        logger.warning("geocode: Nominatim and Photon disagree for '%s'; refusing to guess", street_name)
+        return None
+    src, cand = ("nominatim", nom[0]) if nom else (("photon", pho[0]) if pho else (None, None))
+    if cand is None:
+        return None
+    return {"street": street_name.title(), "lat": round(cand["lat"], 5), "lon": round(cand["lon"], 5),
+            "geocode_source": src, "geocode_confidence": "single_source", "address_hint": cand.get("hint", "")}

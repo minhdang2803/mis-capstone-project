@@ -1,0 +1,10 @@
+services:
+  osrm:
+    image: ghcr.io/project-osrm/osrm-backend:latest
+    command: osrm-routed --algorithm mld --max-matching-size 1000 /data/hcmc.osrm
+    volumes:
+      - ./osrm/data:/data:ro
+    ports:
+      # Host port 5001 (macOS AirPlay uses 5000). Bound to localhost only; expose through a reverse proxy, never directly.
+      - "127.0.0.1:5001:5000"
+    restart: unless-stopped

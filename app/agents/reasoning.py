@@ -8,11 +8,13 @@ def route_reasoning_agent(state: AgentState) -> AgentState:
     """
     logs = state["logs"]
     refl_cnt = state["reflection_count"]
-    logs.append(f"[2. Reasoning Agent] Calculating route (Iteration {refl_cnt})...")
-    
     waypoints = state.get("waypoints", [])
+    logs.append(
+        f"[2. Reasoning Agent] Calculating route (Iteration {refl_cnt}, {len(waypoints)} detour waypoint(s))..."
+    )
+
     route = calculate_route_osrm(state["origin"], state["destination"], waypoints=waypoints)
-    
+
     state["current_route"] = route
     logs.append(f"  -> Generated Polyline: Distance = {route['distance_m']/1000.0:.2f} km, Duration = {route['duration_s']/60.0:.1f} mins")
     return state

@@ -2,8 +2,9 @@
   "metadata": {
     "title": "Danh mục Điểm đen Ngập nước do Mưa và Triều cường tại TP.HCM",
     "authority": "Tổng hợp từ Báo cáo Phân loại Tiêu thoát nước - Sở Xây dựng TP.HCM & Trung tâm Quản lý Hạ tầng Kỹ thuật",
-    "updated_at": "2026-10-19",
-    "version": "1.0.0"
+    "updated_at": "2026-10-23",
+    "version": "1.1.0",
+    "extension_note": "Entries with added_in=1.1.0 were added by scripts/expand_gazetteer.py from the listed source articles; coordinates are one geocoded point on the street, not the flooded segment. needs_review=true marks single-service geocodes that should be checked on a map."
   },
   "blackspots": [
     {
@@ -28,7 +29,7 @@
       "street": "Nguyễn Thị Thập",
       "district": "Quận 7",
       "lat": 10.7415,
-      "lon": 106.7320,
+      "lon": 106.732,
       "radius_m": 400.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn chân cầu Phú Mỹ"
@@ -36,8 +37,8 @@
     {
       "street": "Lâm Văn Bền",
       "district": "Quận 7",
-      "lat": 10.7440,
-      "lon": 106.7160,
+      "lat": 10.744,
+      "lon": 106.716,
       "radius_m": 350.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn qua chợ Cư xá Ngân hàng"
@@ -45,8 +46,8 @@
     {
       "street": "Mai Văn Vĩnh",
       "district": "Quận 7",
-      "lat": 10.7460,
-      "lon": 106.7110,
+      "lat": 10.746,
+      "lon": 106.711,
       "radius_m": 300.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn giao Nguyễn Thị Thập"
@@ -54,8 +55,8 @@
     {
       "street": "Lê Văn Lương",
       "district": "Huyện Nhà Bè",
-      "lat": 10.7080,
-      "lon": 106.7030,
+      "lat": 10.708,
+      "lon": 106.703,
       "radius_m": 350.0,
       "cause": "triều cường",
       "landmark": "Cầu Rạch Đĩa và Cầu Long Kiểng"
@@ -63,8 +64,8 @@
     {
       "street": "Đào Sư Tích",
       "district": "Huyện Nhà Bè",
-      "lat": 10.7050,
-      "lon": 106.6980,
+      "lat": 10.705,
+      "lon": 106.698,
       "radius_m": 400.0,
       "cause": "triều cường",
       "landmark": "Khu vực trũng thấp ven sông"
@@ -72,8 +73,8 @@
     {
       "street": "Nguyễn Bình",
       "district": "Huyện Nhà Bè",
-      "lat": 10.6870,
-      "lon": 106.7350,
+      "lat": 10.687,
+      "lon": 106.735,
       "radius_m": 400.0,
       "cause": "triều cường",
       "landmark": "Đoạn qua cầu Mương Chuối"
@@ -81,8 +82,8 @@
     {
       "street": "Nguyễn Văn Tạo",
       "district": "Huyện Nhà Bè",
-      "lat": 10.6480,
-      "lon": 106.7450,
+      "lat": 10.648,
+      "lon": 106.745,
       "radius_m": 450.0,
       "cause": "triều cường",
       "landmark": "Khu vực Hiệp Phước - Long Thới"
@@ -101,7 +102,7 @@
       "district": "TP Thủ Đức",
       "ward": "Thảo Điền",
       "lat": 10.8055,
-      "lon": 106.7300,
+      "lon": 106.73,
       "radius_m": 350.0,
       "cause": "mưa lớn",
       "landmark": "Rốn ngập Thảo Điền đoạn giao Xuân Thủy"
@@ -111,7 +112,7 @@
       "district": "TP Thủ Đức",
       "ward": "Thảo Điền",
       "lat": 10.8045,
-      "lon": 106.7340,
+      "lon": 106.734,
       "radius_m": 250.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn Thảo Điền Pearl"
@@ -120,7 +121,7 @@
       "street": "Nguyễn Văn Hưởng",
       "district": "TP Thủ Đức",
       "ward": "Thảo Điền",
-      "lat": 10.8090,
+      "lat": 10.809,
       "lon": 106.7315,
       "radius_m": 300.0,
       "cause": "mưa lớn",
@@ -130,8 +131,8 @@
       "street": "Tô Ngọc Vân",
       "district": "TP Thủ Đức",
       "ward": "Linh Đông",
-      "lat": 10.8580,
-      "lon": 106.7550,
+      "lat": 10.858,
+      "lon": 106.755,
       "radius_m": 350.0,
       "cause": "mưa lớn",
       "landmark": "Khu vực Chợ Thủ Đức và đường ray xe lửa"
@@ -150,7 +151,7 @@
       "street": "Đặng Thị Rành",
       "district": "TP Thủ Đức",
       "ward": "Linh Chiểu",
-      "lat": 10.8510,
+      "lat": 10.851,
       "lon": 106.7595,
       "radius_m": 200.0,
       "cause": "mưa lớn",
@@ -160,8 +161,8 @@
       "street": "Hồ Văn Tư",
       "district": "TP Thủ Đức",
       "ward": "Linh Chiểu",
-      "lat": 10.8530,
-      "lon": 106.7570,
+      "lat": 10.853,
+      "lon": 106.757,
       "radius_m": 250.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn giao Võ Văn Ngân"
@@ -170,7 +171,7 @@
       "street": "Võ Văn Ngân",
       "district": "TP Thủ Đức",
       "lat": 10.8505,
-      "lon": 106.7580,
+      "lon": 106.758,
       "radius_m": 350.0,
       "cause": "mưa lớn",
       "landmark": "Dốc Chợ Thủ Đức đến Nhà thiếu nhi"
@@ -189,7 +190,7 @@
       "district": "TP Thủ Đức",
       "ward": "Linh Đông",
       "lat": 10.8535,
-      "lon": 106.7510,
+      "lon": 106.751,
       "radius_m": 300.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn ngã ba Linh Đông"
@@ -198,7 +199,7 @@
       "street": "Linh Đông",
       "district": "TP Thủ Đức",
       "ward": "Linh Đông",
-      "lat": 10.8520,
+      "lat": 10.852,
       "lon": 106.7525,
       "radius_m": 250.0,
       "cause": "mưa lớn",
@@ -208,8 +209,8 @@
       "street": "Bình Chiểu",
       "district": "TP Thủ Đức",
       "ward": "Bình Chiểu",
-      "lat": 10.8750,
-      "lon": 106.7380,
+      "lat": 10.875,
+      "lon": 106.738,
       "radius_m": 300.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn ngã tư Cầu Vượt Gò Dưa"
@@ -218,8 +219,8 @@
       "street": "Tỉnh Lộ 43",
       "district": "TP Thủ Đức",
       "ward": "Bình Chiểu",
-      "lat": 10.8780,
-      "lon": 106.7450,
+      "lat": 10.878,
+      "lon": 106.745,
       "radius_m": 400.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn giáp ranh Bình Dương"
@@ -228,7 +229,7 @@
       "street": "Lê Thị Hoa",
       "district": "TP Thủ Đức",
       "lat": 10.8795,
-      "lon": 106.7410,
+      "lon": 106.741,
       "radius_m": 300.0,
       "cause": "mưa lớn",
       "landmark": "Khu phố chợ Bình Chiểu"
@@ -237,7 +238,7 @@
       "street": "Đường số 11",
       "district": "TP Thủ Đức",
       "ward": "Linh Xuân",
-      "lat": 10.8540,
+      "lat": 10.854,
       "lon": 106.7555,
       "radius_m": 350.0,
       "cause": "mưa lớn",
@@ -247,8 +248,8 @@
       "street": "Quốc Lộ 13",
       "district": "TP Thủ Đức",
       "ward": "Hiệp Bình Chánh",
-      "lat": 10.8350,
-      "lon": 106.7110,
+      "lat": 10.835,
+      "lon": 106.711,
       "radius_m": 450.0,
       "cause": "triều cường",
       "landmark": "Chân cầu Ông Dầu đến ngã tư Bình Triệu"
@@ -257,7 +258,7 @@
       "street": "Phạm Văn Đồng",
       "district": "TP Thủ Đức",
       "lat": 10.8385,
-      "lon": 106.7260,
+      "lon": 106.726,
       "radius_m": 350.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn vòng xoay Linh Đông"
@@ -266,8 +267,8 @@
       "street": "Lương Định Của",
       "district": "TP Thủ Đức",
       "ward": "An Phú",
-      "lat": 10.7910,
-      "lon": 106.7320,
+      "lat": 10.791,
+      "lon": 106.732,
       "radius_m": 400.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn nút giao An Phú"
@@ -276,7 +277,7 @@
       "street": "Mai Chí Thọ",
       "district": "TP Thủ Đức",
       "lat": 10.7935,
-      "lon": 106.7440,
+      "lon": 106.744,
       "radius_m": 350.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn hầm chui nút giao An Phú"
@@ -284,8 +285,8 @@
     {
       "street": "Nguyễn Duy Trinh",
       "district": "TP Thủ Đức",
-      "lat": 10.7890,
-      "lon": 106.7620,
+      "lat": 10.789,
+      "lon": 106.762,
       "radius_m": 350.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn chân cầu Giồng Ông Tố"
@@ -293,8 +294,8 @@
     {
       "street": "Đỗ Xuân Hợp",
       "district": "TP Thủ Đức",
-      "lat": 10.8120,
-      "lon": 106.7750,
+      "lat": 10.812,
+      "lon": 106.775,
       "radius_m": 350.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn chân cầu Nam Lý"
@@ -302,8 +303,8 @@
     {
       "street": "Tăng Nhơn Phú",
       "district": "TP Thủ Đức",
-      "lat": 10.8340,
-      "lon": 106.7720,
+      "lat": 10.834,
+      "lon": 106.772,
       "radius_m": 300.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn trước Trường CĐ Công Thương"
@@ -311,8 +312,8 @@
     {
       "street": "Lê Văn Việt",
       "district": "TP Thủ Đức",
-      "lat": 10.8460,
-      "lon": 106.7780,
+      "lat": 10.846,
+      "lon": 106.778,
       "radius_m": 300.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn ngã tư Thủ Đức"
@@ -321,7 +322,7 @@
       "street": "Nguyễn Hữu Cảnh",
       "district": "Quận Bình Thạnh",
       "lat": 10.7915,
-      "lon": 106.7160,
+      "lon": 106.716,
       "radius_m": 500.0,
       "cause": "cả hai",
       "landmark": "Đoạn chân cầu vượt Nguyễn Hữu Cảnh và The Manor"
@@ -338,8 +339,8 @@
     {
       "street": "Nguyễn Gia Trí",
       "district": "Quận Bình Thạnh",
-      "lat": 10.8030,
-      "lon": 106.7140,
+      "lat": 10.803,
+      "lon": 106.714,
       "radius_m": 250.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn D2 cũ giao Ung Văn Khiêm"
@@ -356,7 +357,7 @@
     {
       "street": "Bạch Đằng",
       "district": "Quận Bình Thạnh",
-      "lat": 10.8010,
+      "lat": 10.801,
       "lon": 106.7065,
       "radius_m": 250.0,
       "cause": "mưa lớn",
@@ -365,7 +366,7 @@
     {
       "street": "Đinh Bộ Lĩnh",
       "district": "Quận Bình Thạnh",
-      "lat": 10.8110,
+      "lat": 10.811,
       "lon": 106.7115,
       "radius_m": 400.0,
       "cause": "cả hai",
@@ -374,8 +375,8 @@
     {
       "street": "Nguyễn Xí",
       "district": "Quận Bình Thạnh",
-      "lat": 10.8190,
-      "lon": 106.7050,
+      "lat": 10.819,
+      "lon": 106.705,
       "radius_m": 350.0,
       "cause": "triều cường",
       "landmark": "Đoạn chân Cầu Đỏ"
@@ -383,8 +384,8 @@
     {
       "street": "Bùi Đình Túy",
       "district": "Quận Bình Thạnh",
-      "lat": 10.8060,
-      "lon": 106.7010,
+      "lat": 10.806,
+      "lon": 106.701,
       "radius_m": 300.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn chân cầu Bùi Đình Túy"
@@ -392,8 +393,8 @@
     {
       "street": "Nơ Trang Long",
       "district": "Quận Bình Thạnh",
-      "lat": 10.8170,
-      "lon": 106.6960,
+      "lat": 10.817,
+      "lon": 106.696,
       "radius_m": 350.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn Cầu Băng Ky"
@@ -401,8 +402,8 @@
     {
       "street": "Bình Quới",
       "district": "Quận Bình Thạnh",
-      "lat": 10.8240,
-      "lon": 106.7320,
+      "lat": 10.824,
+      "lon": 106.732,
       "radius_m": 450.0,
       "cause": "triều cường",
       "landmark": "Bán đảo Thanh Đa, đoạn bến phà Bình Quới"
@@ -411,7 +412,7 @@
       "street": "Nguyễn Văn Khối",
       "district": "Quận Gò Vấp",
       "lat": 10.8418,
-      "lon": 106.6530,
+      "lon": 106.653,
       "radius_m": 350.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn giao Lê Văn Thọ, Công viên Làng Hoa"
@@ -419,8 +420,8 @@
     {
       "street": "Lê Văn Thọ",
       "district": "Quận Gò Vấp",
-      "lat": 10.8430,
-      "lon": 106.6550,
+      "lat": 10.843,
+      "lon": 106.655,
       "radius_m": 250.0,
       "cause": "mưa lớn",
       "landmark": "Khu vực Làng Hoa Gò Vấp"
@@ -428,8 +429,8 @@
     {
       "street": "Phan Huy Ích",
       "district": "Quận Gò Vấp",
-      "lat": 10.8320,
-      "lon": 106.6380,
+      "lat": 10.832,
+      "lon": 106.638,
       "radius_m": 450.0,
       "cause": "mưa lớn",
       "landmark": "Ranh giới Gò Vấp - Tân Bình, chân cầu Tham Lương"
@@ -437,8 +438,8 @@
     {
       "street": "Phạm Văn Chiêu",
       "district": "Quận Gò Vấp",
-      "lat": 10.8490,
-      "lon": 106.6520,
+      "lat": 10.849,
+      "lon": 106.652,
       "radius_m": 400.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn trước Trường THCS Lam Sơn"
@@ -447,7 +448,7 @@
       "street": "Lê Đức Thọ",
       "district": "Quận Gò Vấp",
       "lat": 10.8475,
-      "lon": 106.6690,
+      "lon": 106.669,
       "radius_m": 350.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn Ngã ba Cây Trâm"
@@ -455,8 +456,8 @@
     {
       "street": "Quang Trung",
       "district": "Quận Gò Vấp",
-      "lat": 10.8390,
-      "lon": 106.6580,
+      "lat": 10.839,
+      "lon": 106.658,
       "radius_m": 400.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn Chợ Cầu"
@@ -464,8 +465,8 @@
     {
       "street": "Nguyễn Thái Sơn",
       "district": "Quận Gò Vấp",
-      "lat": 10.8250,
-      "lon": 106.6850,
+      "lat": 10.825,
+      "lon": 106.685,
       "radius_m": 300.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn Ngã sáu Gò Vấp"
@@ -473,8 +474,8 @@
     {
       "street": "Nguyễn Oanh",
       "district": "Quận Gò Vấp",
-      "lat": 10.8360,
-      "lon": 106.6780,
+      "lat": 10.836,
+      "lon": 106.678,
       "radius_m": 300.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn chân Cầu An Lộc"
@@ -483,7 +484,7 @@
       "street": "Nguyễn Văn Công",
       "district": "Quận Gò Vấp",
       "lat": 10.8195,
-      "lon": 106.6740,
+      "lon": 106.674,
       "radius_m": 250.0,
       "cause": "mưa lớn",
       "landmark": "Khu vực sân bay"
@@ -492,7 +493,7 @@
       "street": "CityLand",
       "district": "Quận Gò Vấp",
       "lat": 10.8305,
-      "lon": 106.6710,
+      "lon": 106.671,
       "radius_m": 300.0,
       "cause": "mưa lớn",
       "landmark": "Khu đô thị CityLand Park Hills"
@@ -500,8 +501,8 @@
     {
       "street": "Đồng Đen",
       "district": "Quận Tân Bình",
-      "lat": 10.7930,
-      "lon": 106.6450,
+      "lat": 10.793,
+      "lon": 106.645,
       "radius_m": 300.0,
       "cause": "mưa lớn",
       "landmark": "Khu Bàu Cát"
@@ -510,7 +511,7 @@
       "street": "Bàu Cát",
       "district": "Quận Tân Bình",
       "lat": 10.7915,
-      "lon": 106.6470,
+      "lon": 106.647,
       "radius_m": 250.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn Chợ Bàu Cát"
@@ -518,8 +519,8 @@
     {
       "street": "Trương Công Định",
       "district": "Quận Tân Bình",
-      "lat": 10.7960,
-      "lon": 106.6440,
+      "lat": 10.796,
+      "lon": 106.644,
       "radius_m": 250.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn giao Ba Vân"
@@ -527,7 +528,7 @@
     {
       "street": "Âu Cơ",
       "district": "Quận Tân Bình",
-      "lat": 10.7850,
+      "lat": 10.785,
       "lon": 106.6475,
       "radius_m": 350.0,
       "cause": "mưa lớn",
@@ -545,7 +546,7 @@
     {
       "street": "Hồng Hà",
       "district": "Quận Tân Bình",
-      "lat": 10.8130,
+      "lat": 10.813,
       "lon": 106.6705,
       "radius_m": 300.0,
       "cause": "mưa lớn",
@@ -554,8 +555,8 @@
     {
       "street": "Phan Anh",
       "district": "Quận Tân Phú",
-      "lat": 10.7670,
-      "lon": 106.6270,
+      "lat": 10.767,
+      "lon": 106.627,
       "radius_m": 450.0,
       "cause": "mưa lớn",
       "landmark": "Ranh giới Tân Phú - Bình Tân"
@@ -563,8 +564,8 @@
     {
       "street": "Thoại Ngọc Hầu",
       "district": "Quận Tân Phú",
-      "lat": 10.7820,
-      "lon": 106.6320,
+      "lat": 10.782,
+      "lon": 106.632,
       "radius_m": 350.0,
       "cause": "mưa lớn",
       "landmark": "Trước UBND Quận Tân Phú"
@@ -573,7 +574,7 @@
       "street": "Hòa Bình",
       "district": "Quận Tân Phú",
       "lat": 10.7695,
-      "lon": 106.6390,
+      "lon": 106.639,
       "radius_m": 350.0,
       "cause": "mưa lớn",
       "landmark": "Cổng sau Công viên Đầm Sen"
@@ -581,8 +582,8 @@
     {
       "street": "Nguyễn Sơn",
       "district": "Quận Tân Phú",
-      "lat": 10.7830,
-      "lon": 106.6260,
+      "lat": 10.783,
+      "lon": 106.626,
       "radius_m": 300.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn Chợ Tân Hương"
@@ -591,7 +592,7 @@
       "street": "Kênh 19/5",
       "district": "Quận Tân Phú",
       "lat": 10.8115,
-      "lon": 106.6230,
+      "lon": 106.623,
       "radius_m": 350.0,
       "cause": "mưa lớn",
       "landmark": "Khu vực KCN Tân Bình"
@@ -600,7 +601,7 @@
       "street": "Kinh Dương Vương",
       "district": "Quận Bình Tân",
       "lat": 10.7485,
-      "lon": 106.6180,
+      "lon": 106.618,
       "radius_m": 450.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn Mũi Tàu / Bến xe Miền Tây"
@@ -608,8 +609,8 @@
     {
       "street": "Hồ Học Lãm",
       "district": "Quận Bình Tân",
-      "lat": 10.7290,
-      "lon": 106.6130,
+      "lat": 10.729,
+      "lon": 106.613,
       "radius_m": 450.0,
       "cause": "cả hai",
       "landmark": "Đoạn giao Võ Văn Kiệt và Quốc lộ 1"
@@ -617,7 +618,7 @@
     {
       "street": "Mã Lò",
       "district": "Quận Bình Tân",
-      "lat": 10.7620,
+      "lat": 10.762,
       "lon": 106.6095,
       "radius_m": 350.0,
       "cause": "mưa lớn",
@@ -626,8 +627,8 @@
     {
       "street": "Bà Hom",
       "district": "Quận 6",
-      "lat": 10.7580,
-      "lon": 106.6250,
+      "lat": 10.758,
+      "lon": 106.625,
       "radius_m": 300.0,
       "cause": "mưa lớn",
       "landmark": "Khu vực Chợ Cây Da Sà"
@@ -635,8 +636,8 @@
     {
       "street": "An Dương Vương",
       "district": "Quận 6",
-      "lat": 10.7410,
-      "lon": 106.6260,
+      "lat": 10.741,
+      "lon": 106.626,
       "radius_m": 400.0,
       "cause": "cả hai",
       "landmark": "Đoạn Tân Tạo - An Lạc"
@@ -644,8 +645,8 @@
     {
       "street": "Tân Hòa Đông",
       "district": "Quận 6",
-      "lat": 10.7640,
-      "lon": 106.6240,
+      "lat": 10.764,
+      "lon": 106.624,
       "radius_m": 350.0,
       "cause": "mưa lớn",
       "landmark": "Đoạn ngã ba Tân Hòa Đông - Bà Hom"
@@ -653,8 +654,8 @@
     {
       "street": "Hậu Giang",
       "district": "Quận 6",
-      "lat": 10.7510,
-      "lon": 106.6430,
+      "lat": 10.751,
+      "lon": 106.643,
       "radius_m": 300.0,
       "cause": "triều cường",
       "landmark": "Chân cầu Hậu Giang"
@@ -662,8 +663,8 @@
     {
       "street": "Mễ Cốc",
       "district": "Quận 8",
-      "lat": 10.7270,
-      "lon": 106.6340,
+      "lat": 10.727,
+      "lon": 106.634,
       "radius_m": 450.0,
       "cause": "triều cường",
       "landmark": "Rốn ngập bờ kè Bến Mễ Cốc"
@@ -671,8 +672,8 @@
     {
       "street": "Bến Phú Định",
       "district": "Quận 8",
-      "lat": 10.7220,
-      "lon": 106.6280,
+      "lat": 10.722,
+      "lon": 106.628,
       "radius_m": 400.0,
       "cause": "triều cường",
       "landmark": "Khu vực bến phà Phú Định cũ"
@@ -680,8 +681,8 @@
     {
       "street": "Phạm Thế Hiển",
       "district": "Quận 8",
-      "lat": 10.7430,
-      "lon": 106.6770,
+      "lat": 10.743,
+      "lon": 106.677,
       "radius_m": 450.0,
       "cause": "triều cường",
       "landmark": "Đoạn dọc bờ Kênh Đôi, Phường 4 và Phường 7"
@@ -690,7 +691,7 @@
       "street": "Lương Ngọc Quyến",
       "district": "Quận 8",
       "lat": 10.7245,
-      "lon": 106.6370,
+      "lon": 106.637,
       "radius_m": 300.0,
       "cause": "triều cường",
       "landmark": "Khu vực Bến Bình Đông"
@@ -699,7 +700,7 @@
       "street": "Hồ Thành Biên",
       "district": "Quận 8",
       "lat": 10.7415,
-      "lon": 106.6810,
+      "lon": 106.681,
       "radius_m": 250.0,
       "cause": "triều cường",
       "landmark": "Đoạn Rạch Ông Lớn"
@@ -708,7 +709,7 @@
       "street": "Lê Lợi",
       "district": "Quận 1",
       "lat": 10.7735,
-      "lon": 106.7000,
+      "lon": 106.7,
       "radius_m": 150.0,
       "cause": "mưa lớn",
       "landmark": "Khu vực trung tâm Chợ Bến Thành"
@@ -717,10 +718,752 @@
       "street": "Bùi Viện",
       "district": "Quận 1",
       "lat": 10.7675,
-      "lon": 106.6930,
+      "lon": 106.693,
       "radius_m": 150.0,
       "cause": "mưa lớn",
       "landmark": "Phố đi bộ Bùi Viện đoạn Đỗ Quang Đẩu"
+    },
+    {
+      "street": "Dương Bá Trạc",
+      "district": null,
+      "ward": null,
+      "lat": 10.74223,
+      "lon": 106.68836,
+      "radius_m": 350.0,
+      "cause": "triều cường",
+      "landmark": null,
+      "sources": [
+        "https://tienphong.vn/122-diem-co-nguy-co-ngap-tai-tphcm-csgt-canh-bao-khan-post1882808.tpo"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Dương Bá Trạc, Khu phố 16, Phường Chánh Hưng, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Bà Triệu",
+      "district": null,
+      "ward": null,
+      "lat": 10.7573,
+      "lon": 106.66244,
+      "radius_m": 350.0,
+      "cause": "cả hai",
+      "landmark": null,
+      "sources": [
+        "https://cafef.vn/12-tuyen-duong-o-tphcm-ngap-sau-mua-lon-co-noi-ngap-hon-1-met-188261001174131262.chn"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Bà Triệu, Khu phố 1, Phường Chợ Lớn, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Calmette",
+      "district": null,
+      "ward": null,
+      "lat": 10.76654,
+      "lon": 106.70015,
+      "radius_m": 350.0,
+      "cause": "triều cường",
+      "landmark": null,
+      "sources": [
+        "https://tuoitre.vn/23-tuyen-duong-ngap-do-trieu-cuong-o-tp-hcm-nguoi-dan-can-ghi-nho-20251120193639188.htm"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Calmette, Khu phố 14, Phường Bến Thành, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Châu Văn Liêm",
+      "district": null,
+      "ward": null,
+      "lat": 10.75329,
+      "lon": 106.65878,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://www.sggp.org.vn/mua-lon-ngap-nhieu-noi-52105.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Châu Văn Liêm, Khu phố 10, Phường Chợ Lớn, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Điện Biên Phủ",
+      "district": null,
+      "ward": null,
+      "lat": 10.80135,
+      "lon": 106.71425,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://vnexpress.net/tp-hcm-chi-con-22-duong-bi-ngap-4112738.html",
+        "https://www.sggp.org.vn/tphcm-mua-xoi-xa-duong-pho-ngap-nang-giao-thong-roi-loan-post647726.html",
+        "https://znews.vn/nhieu-noi-o-quan-binh-thanh-ngap-sau-con-mua-lon-post1222076.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Điện Biên Phủ, Khu phố 38, Phường Thạnh Mỹ Tây, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Dương Đình Hội",
+      "district": null,
+      "ward": null,
+      "lat": 10.82712,
+      "lon": 106.77996,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://www.vietnamplus.vn/mua-lon-gio-tan-tam-nhieu-tuyen-duong-o-thanh-pho-ho-chi-minh-ngap-sau-post954480.vnp"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Đường Dương Đình Hội, Đường Số 22, Khu phố 21, Phường Phước Long",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Đỗ Mười",
+      "district": null,
+      "ward": null,
+      "lat": 10.86844,
+      "lon": 106.72986,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://tienphong.vn/122-diem-co-nguy-co-ngap-tai-tphcm-csgt-canh-bao-khan-post1882808.tpo"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Đường Đỗ Mười, Khu phố 17, Phường Tam Bình, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Đồng Khởi",
+      "district": null,
+      "ward": null,
+      "lat": 10.77625,
+      "lon": 106.70288,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://baodautu.vn/duong-nguyen-huu-canh-ngap-den-yen-xe-may-trong-dem-d82605.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Đồng Khởi, Khu phố 5, Phường Sài Gòn, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Gò Công",
+      "district": null,
+      "ward": null,
+      "lat": 10.74892,
+      "lon": 106.65504,
+      "radius_m": 350.0,
+      "cause": "cả hai",
+      "landmark": null,
+      "sources": [
+        "https://tienphong.vn/trieu-cuong-dang-cao-khu-vuc-cho-lon-o-tphcm-hoa-song-post1793751.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Gò Công, Khu phố 21, Phường Chợ Lớn, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Hà Huy Giáp",
+      "district": null,
+      "ward": null,
+      "lat": 10.8915,
+      "lon": 106.68477,
+      "radius_m": 350.0,
+      "cause": "triều cường",
+      "landmark": null,
+      "sources": [
+        "https://tienphong.vn/122-diem-co-nguy-co-ngap-tai-tphcm-csgt-canh-bao-khan-post1882808.tpo"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Hẻm 827 Đường Hà Huy Giáp, Khu phố 16, Phường Thới An, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Hoàng Hữu Nam",
+      "district": null,
+      "ward": null,
+      "lat": 10.86544,
+      "lon": 106.81362,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://vtcnews.vn/nhung-noi-cu-mua-la-ngap-o-tphcm-ar550142.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Đường Hoàng Hữu Nam, Khu phố 2, Phường Tăng Nhơn Phú, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Hoàng Quốc Việt",
+      "district": null,
+      "ward": null,
+      "lat": 10.71409,
+      "lon": 106.74074,
+      "radius_m": 350.0,
+      "cause": "triều cường",
+      "landmark": null,
+      "sources": [
+        "https://tienphong.vn/nhieu-tuyen-duong-o-tphcm-ngap-sau-do-trieu-cuong-post1880444.html",
+        "https://tienphong.vn/trieu-cuong-dat-dinh-nhieu-tuyen-duong-o-tphcm-hoa-song-post1802212.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Hẻm 79 Đường Hoàng Quốc Việt, Khu phố 24, Phường Phú Thuận, Nhà Bè",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Hồng Bàng",
+      "district": null,
+      "ward": null,
+      "lat": 10.75505,
+      "lon": 106.66054,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://www.sggp.org.vn/mua-lon-ngap-nhieu-noi-52105.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Hồng Bàng, Khu phố 1, Phường Chợ Lớn, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Khuông Việt",
+      "district": null,
+      "ward": null,
+      "lat": 10.77136,
+      "lon": 106.63767,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://vtcnews.vn/nhung-noi-cu-mua-la-ngap-o-tphcm-ar550142.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Đường Khuông Việt, Khu phố 35, Phường Tân Phú, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Lã Xuân Oai",
+      "district": null,
+      "ward": null,
+      "lat": 10.83158,
+      "lon": 106.80344,
+      "radius_m": 350.0,
+      "cause": "cả hai",
+      "landmark": null,
+      "sources": [
+        "https://nongnghiepmoitruong.vn/nhieu-con-duongtphcm-thanh-song-sau-con-mua-dau-mua-d218007.html",
+        "https://vnexpress.net/duong-ngap-ca-met-o-thu-duc-4641696.html",
+        "https://www.sggp.org.vn/mua-lon-tphcm-ngap-sau-nhieu-noi-post435016.html",
+        "https://www.sggp.org.vn/tphcm-mua-lon-tren-dien-rong-post740020.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Đường Lã Xuân Oai, Khu công nghệ cao Thành phố Hồ Chí Minh, Phường Tăng Nhơn Phú, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Lê Cơ",
+      "district": null,
+      "ward": null,
+      "lat": 10.72774,
+      "lon": 106.61264,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://vtcnews.vn/nhieu-tuyen-duong-tp-hcm-ngap-gan-lut-banh-xe-trong-mua-lon-ar942463.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Đường Lê Cơ, Khu phố 35, Phường An Lạc, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Lê Lai",
+      "district": null,
+      "ward": null,
+      "lat": 10.769,
+      "lon": 106.69131,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://baodautu.vn/duong-nguyen-huu-canh-ngap-den-yen-xe-may-trong-dem-d82605.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Lê Lai, Khu phố 6, Phường Bến Thành, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Lê Quang Sung",
+      "district": null,
+      "ward": null,
+      "lat": 10.75158,
+      "lon": 106.64521,
+      "radius_m": 350.0,
+      "cause": "cả hai",
+      "landmark": null,
+      "sources": [
+        "https://tienphong.vn/trieu-cuong-dang-cao-khu-vuc-cho-lon-o-tphcm-hoa-song-post1793751.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Lê Quang Sung, Khu phố 9, Phường Bình Tây, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Lũy Bán Bích",
+      "district": null,
+      "ward": null,
+      "lat": 10.78934,
+      "lon": 106.63724,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://vtcnews.vn/nhung-noi-cu-mua-la-ngap-o-tphcm-ar550142.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Lũy Bán Bích, Khu phố 1, Phường Tân Phú, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Ngô Tất Tố",
+      "district": null,
+      "ward": null,
+      "lat": 10.79031,
+      "lon": 106.71566,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://vov.vn/tin-24h/mua-lon-gay-ngap-kinh-hoang-nhieu-tuyen-duong-o-tphcm-554333.vov"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Ngô Tất Tố, Khu phố 18, Phường Thạnh Mỹ Tây, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Nguyễn Ảnh Thủ",
+      "district": null,
+      "ward": null,
+      "lat": 10.87345,
+      "lon": 106.62265,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://nongnghiepmoitruong.vn/tphcm-hung-tran-mua-lich-su-khien-nhieu-noi-ngap-sau-d752467.html",
+        "https://vov.vn/doi-song/tp-hcm-mua-lon-duong-pho-thanh-song-406845.vov",
+        "https://www.sggp.org.vn/tphcm-nhieu-phuong-tien-bi-un-u-do-mua-lon-post494823.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Hẻm 885 Đường Nguyễn Ảnh Thủ, Khu phố 19, Phường Trung Mỹ Tây, Xã Đông Thạnh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Nguyễn Cư Trinh",
+      "district": null,
+      "ward": null,
+      "lat": 10.76467,
+      "lon": 106.69203,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://vtcnews.vn/nhung-noi-cu-mua-la-ngap-o-tphcm-ar550142.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Nguyễn Cư Trinh, Khu phố 6, Phường Cầu Ông Lãnh, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Nguyễn Kiệm",
+      "district": null,
+      "ward": null,
+      "lat": 10.82467,
+      "lon": 106.67929,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://vietnamnet.vn/sai-gon-ngap-duong-pho-ket-cung-sau-mua-lon-373934.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Nguyễn Kiệm, Khu phố 13, Phường Hạnh Thông, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Nguyễn Lương Bằng",
+      "district": null,
+      "ward": null,
+      "lat": 10.71097,
+      "lon": 106.73171,
+      "radius_m": 350.0,
+      "cause": "cả hai",
+      "landmark": null,
+      "sources": [
+        "https://tienphong.vn/nhieu-tuyen-duong-o-tphcm-ngap-sau-do-trieu-cuong-post1880444.html",
+        "https://tienphong.vn/trieu-cuong-dang-cao-khu-vuc-cho-lon-o-tphcm-hoa-song-post1793751.html",
+        "https://tienphong.vn/trieu-cuong-dat-dinh-nhieu-tuyen-duong-o-tphcm-hoa-song-post1802212.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Nguyễn Lương Bằng nối dài, Phường Tân Mỹ, Nhà Bè, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Nguyễn Văn Linh",
+      "district": null,
+      "ward": null,
+      "lat": 10.72891,
+      "lon": 106.70044,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://tienphong.vn/122-diem-co-nguy-co-ngap-tai-tphcm-csgt-canh-bao-khan-post1882808.tpo"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Đường Nguyễn Văn Linh, Khu phố 30, Phường Tân Hưng, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Nguyễn Văn Quá",
+      "district": null,
+      "ward": null,
+      "lat": 10.83789,
+      "lon": 106.63033,
+      "radius_m": 350.0,
+      "cause": "cả hai",
+      "landmark": null,
+      "sources": [
+        "https://cafef.vn/12-tuyen-duong-o-tphcm-ngap-sau-mua-lon-co-noi-ngap-hon-1-met-188261001174131262.chn",
+        "https://vnexpress.net/tp-hcm-chi-con-22-duong-bi-ngap-4112738.html",
+        "https://www.vietnamplus.vn/mua-lon-ket-hop-trieu-cuong-thanh-pho-ho-chi-minh-tiep-tuc-doi-mat-nguy-co-ngap-post1139367.vnp",
+        "https://www.vietnamplus.vn/tphcm-mua-lon-gay-ngap-nhieu-khu-vuc-co-ca-mua-da-post636986.vnp"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Hẻm 444 Đường Nguyễn Văn Quá, Khu phố 23, Phường Đông Hưng Thuận, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Nguyễn Xiển",
+      "district": null,
+      "ward": null,
+      "lat": 10.8836,
+      "lon": 106.83425,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://vtcnews.vn/nhung-noi-cu-mua-la-ngap-o-tphcm-ar550142.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Đường Nguyễn Xiển, Phường Long Bình, Thành phố Hồ Chí Minh, 71217",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Phạm Đức Sơn",
+      "district": null,
+      "ward": null,
+      "lat": 10.71968,
+      "lon": 106.62237,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://tienphong.vn/nguoi-va-xe-nga-nhao-tren-duong-pho-ngap-sau-o-tphcm-post1885529.tpo"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Đường Phạm Đức Sơn, Khu phố 40, Phường Phú Định, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Phạm Phú Thứ",
+      "district": null,
+      "ward": null,
+      "lat": 10.74464,
+      "lon": 106.64377,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://vtcnews.vn/nhung-noi-cu-mua-la-ngap-o-tphcm-ar550142.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Phạm Phú Thứ, Khu phố 9, Phường Bình Tiên, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Phan Đăng Lưu",
+      "district": null,
+      "ward": null,
+      "lat": 10.80373,
+      "lon": 106.68761,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://vtcnews.vn/nhung-noi-cu-mua-la-ngap-o-tphcm-ar550142.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Phan Đăng Lưu, Khu phố 2, Phường Cầu Kiệu, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Phan Văn Hớn",
+      "district": null,
+      "ward": null,
+      "lat": 10.8274,
+      "lon": 106.61819,
+      "radius_m": 350.0,
+      "cause": "cả hai",
+      "landmark": null,
+      "sources": [
+        "https://cafef.vn/12-tuyen-duong-o-tphcm-ngap-sau-mua-lon-co-noi-ngap-hon-1-met-188261001174131262.chn",
+        "https://vnexpress.net/tp-hcm-chi-con-22-duong-bi-ngap-4112738.html",
+        "https://vtcnews.vn/nhieu-tuyen-duong-tp-hcm-ngap-gan-lut-banh-xe-trong-mua-lon-ar942463.html",
+        "https://www.sggp.org.vn/tphcm-nhieu-phuong-tien-bi-un-u-do-mua-lon-post494823.html",
+        "https://www.vietnamplus.vn/mua-lon-ket-hop-trieu-cuong-thanh-pho-ho-chi-minh-tiep-tuc-doi-mat-nguy-co-ngap-post1139367.vnp",
+        "https://www.vietnamplus.vn/nhieu-khu-vuc-o-thanh-pho-ho-chi-minh-ngap-sau-do-mua-lon-ket-hop-trieu-cuong-post1139296.amp"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Hẻm 129/33 Đường Phan Văn Hớn, Khu phố 2, Phường Đông Hưng Thuận, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Sinco",
+      "district": null,
+      "ward": null,
+      "lat": 10.73511,
+      "lon": 106.60488,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://tienphong.vn/nguoi-va-xe-nga-nhao-tren-duong-pho-ngap-sau-o-tphcm-post1885529.tpo",
+        "https://vtcnews.vn/nhieu-tuyen-duong-tp-hcm-ngap-gan-lut-banh-xe-trong-mua-lon-ar942463.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Đường Sinco, Khu phố 14, Phường An Lạc, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Tạ Quang Bửu",
+      "district": null,
+      "ward": null,
+      "lat": 10.73651,
+      "lon": 106.67493,
+      "radius_m": 350.0,
+      "cause": "cả hai",
+      "landmark": null,
+      "sources": [
+        "https://viettimes.vn/mua-lon-nhat-tu-dau-nam-nguoi-sai-gon-lan-dau-gap-lu-post37137.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Hẻm 61 Đường 783 Tạ Quang Bửu, Khu phố 45, Phường Chánh Hưng, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Tên Lửa",
+      "district": null,
+      "ward": null,
+      "lat": 10.74789,
+      "lon": 106.61159,
+      "radius_m": 350.0,
+      "cause": "cả hai",
+      "landmark": null,
+      "sources": [
+        "https://cafef.vn/12-tuyen-duong-o-tphcm-ngap-sau-mua-lon-co-noi-ngap-hon-1-met-188261001174131262.chn"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Đường Tên Lửa, Đường Số 1, Khu phố 12, Phường An Lạc",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Trần Hưng Đạo",
+      "district": null,
+      "ward": null,
+      "lat": 10.75482,
+      "lon": 106.67948,
+      "radius_m": 350.0,
+      "cause": "triều cường",
+      "landmark": null,
+      "sources": [
+        "https://tienphong.vn/122-diem-co-nguy-co-ngap-tai-tphcm-csgt-canh-bao-khan-post1882808.tpo"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Trần Hưng Đạo, Khu phố 8, Phường Chợ Quán, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Trần Não",
+      "district": null,
+      "ward": null,
+      "lat": 10.79496,
+      "lon": 106.73055,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://vnexpress.net/cang-chong-cang-ngap-3421278.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Hẻm 78 Đường Trần Não, Khu phố 15, Phường An Khánh, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Trần Văn Giàu",
+      "district": null,
+      "ward": null,
+      "lat": 10.75184,
+      "lon": 106.60882,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://tienphong.vn/122-diem-co-nguy-co-ngap-tai-tphcm-csgt-canh-bao-khan-post1882808.tpo"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Trần Văn Giàu, Khu phố 12, Phường An Lạc, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Vĩnh Lộc",
+      "district": null,
+      "ward": null,
+      "lat": 10.79287,
+      "lon": 106.55635,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://tienphong.vn/122-diem-co-nguy-co-ngap-tai-tphcm-csgt-canh-bao-khan-post1882808.tpo"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Đường Vĩnh Lộc, Ấp 13, Xã Tân Vĩnh Lộc, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Võ Nguyên Giáp",
+      "district": null,
+      "ward": null,
+      "lat": 10.80488,
+      "lon": 106.75288,
+      "radius_m": 350.0,
+      "cause": "mưa lớn",
+      "landmark": null,
+      "sources": [
+        "https://tienphong.vn/122-diem-co-nguy-co-ngap-tai-tphcm-csgt-canh-bao-khan-post1882808.tpo",
+        "https://www.sggp.org.vn/tphcm-mua-lon-gay-ngap-nhieu-noi-post798119.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Đường Võ Nguyên Giáp, Khu phố 4, Phường Bình Trưng, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
+    },
+    {
+      "street": "Võ Văn Kiệt",
+      "district": null,
+      "ward": null,
+      "lat": 10.75087,
+      "lon": 106.66861,
+      "radius_m": 350.0,
+      "cause": "cả hai",
+      "landmark": null,
+      "sources": [
+        "https://tienphong.vn/122-diem-co-nguy-co-ngap-tai-tphcm-csgt-canh-bao-khan-post1882808.tpo",
+        "https://tienphong.vn/nguoi-va-xe-nga-nhao-tren-duong-pho-ngap-sau-o-tphcm-post1885529.tpo",
+        "https://tienphong.vn/trieu-cuong-dang-cao-khu-vuc-cho-lon-o-tphcm-hoa-song-post1793751.html"
+      ],
+      "geocode_source": "nominatim+photon",
+      "geocode_confidence": "agreed",
+      "address_hint": "Võ Văn Kiệt, Khu phố 1, Phường An Đông, Thành phố Hồ Chí Minh",
+      "needs_review": false,
+      "added_in": "1.1.0"
     }
   ]
 }
