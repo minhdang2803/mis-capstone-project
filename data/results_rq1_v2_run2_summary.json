@@ -1,0 +1,45 @@
+{
+  "scenarios": 42,
+  "feasible_scenarios": 42,
+  "runs": 1,
+  "max_reflections": 2,
+  "gemini_model": "gemini-3.1-flash-lite",
+  "osrm_server": "http://localhost:5001",
+  "strict_perception": true,
+  "systems": {
+    "B1_OSRM": {
+      "n_rows": 42,
+      "errors": 0,
+      "avoidance_rate_pct_all": 0.0,
+      "avoidance_rate_pct_feasible": 0.0,
+      "avoidance_rate_pct_sd_across_runs": 0.0,
+      "mean_overhead_km": 0.0,
+      "mean_latency_ms": 3.6023809523809525,
+      "p95_latency_ms": 5.2,
+      "pct_under_latency_target": 100.0,
+      "mean_reflections": null,
+      "extraction_precision": null,
+      "extraction_recall": null,
+      "grounding_accuracy": null,
+      "perception_sources": []
+    },
+    "PROPOSED": {
+      "n_rows": 42,
+      "errors": 0,
+      "avoidance_rate_pct_all": 83.33333333333334,
+      "avoidance_rate_pct_feasible": 83.33333333333334,
+      "avoidance_rate_pct_sd_across_runs": 0.0,
+      "mean_overhead_km": 1.1370238095238094,
+      "mean_latency_ms": 3987.2023809523807,
+      "p95_latency_ms": 5845.0,
+      "pct_under_latency_target": 78.57142857142857,
+      "mean_reflections": 0.7857142857142857,
+      "extraction_precision": 0.9172380952380952,
+      "extraction_recall": 0.9523809523809523,
+      "grounding_accuracy": 0.9484047619047619,
+      "perception_sources": [
+        "gemini"
+      ]
+    }
+  }
+}

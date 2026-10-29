@@ -1,0 +1,79 @@
+{
+  "scenarios": 42,
+  "feasible_scenarios": 42,
+  "runs": 1,
+  "max_reflections": 2,
+  "gemini_model": "gemini-3.1-flash-lite",
+  "osrm_server": "http://localhost:5001",
+  "strict_perception": true,
+  "systems": {
+    "B1PLUS_ABLATION": {
+      "n_rows": 42,
+      "errors": 0,
+      "avoidance_rate_pct_all": 28.57142857142857,
+      "avoidance_rate_pct_feasible": 28.57142857142857,
+      "avoidance_rate_pct_sd_across_runs": 0.0,
+      "mean_overhead_km": 0.13004761904761905,
+      "mean_latency_ms": 5919.366666666667,
+      "p95_latency_ms": 23886.7,
+      "pct_under_latency_target": 73.80952380952381,
+      "mean_reflections": null,
+      "extraction_precision": 0.9172380952380952,
+      "extraction_recall": 0.9523809523809523,
+      "grounding_accuracy": 0.9484047619047619,
+      "perception_sources": [
+        "gemini"
+      ]
+    },
+    "B1_OSRM": {
+      "n_rows": 42,
+      "errors": 0,
+      "avoidance_rate_pct_all": 0.0,
+      "avoidance_rate_pct_feasible": 0.0,
+      "avoidance_rate_pct_sd_across_runs": 0.0,
+      "mean_overhead_km": 0.0,
+      "mean_latency_ms": 5.65952380952381,
+      "p95_latency_ms": 7.5,
+      "pct_under_latency_target": 100.0,
+      "mean_reflections": null,
+      "extraction_precision": null,
+      "extraction_recall": null,
+      "grounding_accuracy": null,
+      "perception_sources": []
+    },
+    "B2_SINGLE_AGENT": {
+      "n_rows": 42,
+      "errors": 0,
+      "avoidance_rate_pct_all": 9.523809523809524,
+      "avoidance_rate_pct_feasible": 9.523809523809524,
+      "avoidance_rate_pct_sd_across_runs": 0.0,
+      "mean_overhead_km": 2.4426428571428573,
+      "mean_latency_ms": 18289.707142857143,
+      "p95_latency_ms": 47935.7,
+      "pct_under_latency_target": 19.047619047619047,
+      "mean_reflections": null,
+      "extraction_precision": 0.9682619047619048,
+      "extraction_recall": 0.8019761904761905,
+      "grounding_accuracy": 0.8019761904761905,
+      "perception_sources": []
+    },
+    "PROPOSED": {
+      "n_rows": 42,
+      "errors": 0,
+      "avoidance_rate_pct_all": 83.33333333333334,
+      "avoidance_rate_pct_feasible": 83.33333333333334,
+      "avoidance_rate_pct_sd_across_runs": 0.0,
+      "mean_overhead_km": 1.1370238095238094,
+      "mean_latency_ms": 5642.554761904762,
+      "p95_latency_ms": 15146.0,
+      "pct_under_latency_target": 59.523809523809526,
+      "mean_reflections": 0.7857142857142857,
+      "extraction_precision": 0.9172380952380952,
+      "extraction_recall": 0.9523809523809523,
+      "grounding_accuracy": 0.9484047619047619,
+      "perception_sources": [
+        "gemini"
+      ]
+    }
+  }
+}
