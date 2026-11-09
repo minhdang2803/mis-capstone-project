@@ -6,11 +6,13 @@ scenarios, judged by the same ground-truth hazards.
   B2        single LLM agent with geocode + route tools     (baseline)
   PROPOSED  Perception -> Reasoning -> Reflector loop       (proposed system)
   B1+       Perception + OSRM alternatives, no reflection   (ablation, optional)
+  B2+       B2 plus the Reflector's geometric check tool    (stronger baseline, opt-in via --systems)
 
 Usage:
   python tests/run_rq1_experiment.py                 # strict: aborts if Gemini or OSRM is unavailable
   python tests/run_rq1_experiment.py --runs 3        # repeat to average out LLM non-determinism
   python tests/run_rq1_experiment.py --allow-fallback --limit 5   # offline smoke run (gazetteer fallback)
+  python tests/run_rq1_experiment.py --systems B1_OSRM,B2PLUS_VERIFIER   # the stronger single-agent baseline
 """
 import argparse
 import csv
@@ -31,7 +33,12 @@ from app.services.workflow_service import run_langgraph_workflow
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 LATENCY_TARGET_MS = 3500.0
-SYSTEMS = ["B1_OSRM", "B2_SINGLE_AGENT", "PROPOSED", "B1PLUS_ABLATION"]
+SYSTEMS = ["B1_OSRM", "B2_SINGLE_AGENT", "PROPOSED", "B1PLUS_ABLATION", "B2PLUS_VERIFIER"]
+# Only run when named in --systems, so the default benchmark stays the one reported for RQ1
+OPT_IN_SYSTEMS = {"B2PLUS_VERIFIER"}
+# B2+ step budget, fixed before the benchmark. B2's 6 never bound (at most 4 tool calls in the v2
+# results), but check-then-reroute needs about two more LLM turns per repair attempt.
+B2PLUS_MAX_STEPS = 12
 
 
 def run_system(system, sc, origin, destination, args):
@@ -41,6 +48,11 @@ def run_system(system, sc, origin, destination, args):
         return out["current_route"], out["perceived_hazards"], {}
     if system == "B2_SINGLE_AGENT":
         out = run_single_agent(sc["user_query"], sc["news_context"], origin, destination)
+        return out["current_route"], out["perceived_hazards"], {"tool_calls": out["tool_calls"]}
+    if system == "B2PLUS_VERIFIER":
+        out = run_single_agent(
+            sc["user_query"], sc["news_context"], origin, destination, max_steps=B2PLUS_MAX_STEPS, verify=True
+        )
         return out["current_route"], out["perceived_hazards"], {"tool_calls": out["tool_calls"]}
     if system == "PROPOSED":
         res = run_langgraph_workflow(
@@ -134,7 +146,7 @@ def run_rq1_benchmark(args):
         if unknown:
             sys.exit(f"Unknown system(s): {', '.join(unknown)}. Choose from: {', '.join(SYSTEMS)}")
     else:
-        systems = [s for s in SYSTEMS if args.ablation or s != "B1PLUS_ABLATION"]
+        systems = [s for s in SYSTEMS if s not in OPT_IN_SYSTEMS and (args.ablation or s != "B1PLUS_ABLATION")]
 
     settings.OSRM_CACHE_ENABLED = args.use_cache  # cached OSRM replies would make latency meaningless
     preflight(args)
