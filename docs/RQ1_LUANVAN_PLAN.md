@@ -3,6 +3,8 @@
 - **Nhánh:** `rq1_final_project` (tách từ `rq1-finalize`, 10/11/2026)
 - **Bản ghi trước:** `docs/PROGRESS_2026-11-09.md`
 - **Nguồn:** nhận xét sáu khoảng trống của Claude Cowork, đã đối chiếu lại với repo
+- **Cập nhật 10/11:** B2+ đã làm xong (Mục 2.1); sửa lại chi phí quota và thứ tự (Mục 3);
+  thêm mốc 15/12 cho RQ1 + RQ2 (Mục 5)
 
 ## 0. Phân biệt hai mức, trước khi làm bất cứ việc nào ở đây
 
@@ -19,19 +21,24 @@ Mọi mục dưới đây đều **đúng ở mức luận văn** — không có
 
 ## 1. Tổng hợp sáu khoảng trống, sắp lại theo chi phí/giá trị
 
-Thứ tự này khác thứ tự của bản nhận xét gốc, vì có hai mục rẻ hơn nhiều so với vẻ ngoài
-của nó, và một mục đắt hơn.
+Thứ tự trong bảng là thứ tự ưu tiên theo giá trị; thứ tự **thực hiện** ở Mục 3 khác, vì
+held-out phải chạy sau cùng.
 
-| # | Việc | Chi phí | Quota Gemini | Thay đổi khẳng định nào |
+**Về quota:** chỉ Perception gọi LLM trong hệ thống đề xuất (1 lượt/kịch bản); Reasoning và
+Reflector không tốn lượt nào. Hệ thống đắt là B2 (~3 lượt/kịch bản) và B2+ (~8 lượt/kịch bản,
+đo ngày 10/11). Quota hiện có: ~500 lượt/ngày.
+
+| # | Việc | Trạng thái | Quota Gemini | Thay đổi khẳng định nào |
 |---|---|---|---|---|
-| 1 | B2+ được cấp công cụ kiểm tra hình học | ~2 giờ | ~42 lượt | Chặn được câu "baseline yếu" — đổi *cách giải thích* kết quả |
-| 2 | Bộ kiểm tra giữ riêng (held-out) | ~1 ngày | ~84 lượt | Biến 83,3% từ *in-sample* thành *đã xác nhận* |
-| 3 | Tổng quan tài liệu | ~2 ngày, 0 quota | 0 | Không đổi số liệu; đổi mức học thuật |
-| 4 | Mô hình thứ hai + `temperature > 0` | ~3 ngày | ~430 lượt | Thêm khẳng định "độc lập mô hình" |
-| 5 | Tự động thu thập tin | ~3–5 ngày | 0 khi dựng | Lấp đúng câu chữ RQ1 |
-| 6 | Hợp lệ ngoại tại (chuyến đi thật) | ~1 tuần+ | ~40 lượt | Mạnh nhất, nhưng cần người dùng thật |
+| 1 | B2+ được cấp công cụ kiểm tra hình học | **Xong 10/11** | đã dùng ~385 | Đổi *cách giải thích* kết quả — xem Mục 2.1 |
+| 2 | Bộ kiểm tra giữ riêng (held-out) | Chưa | ~40 (đề xuất + B1+) đến ~260 (thêm B2, B2+) cho ~20 kịch bản | Biến 83,3% từ *in-sample* thành *đã xác nhận* |
+| 3 | Tổng quan tài liệu | Chưa | 0 | Không đổi số liệu; đổi mức học thuật |
+| 4 | Mô hình thứ hai + `temperature > 0` | Chưa | ~126 (3 lượt × 42, chỉ hệ thống đề xuất) + quota nhà cung cấp thứ hai | Thêm khẳng định "độc lập mô hình" |
+| 5 | Tự động thu thập tin | Chưa | 0 khi dựng | Lấp đúng câu chữ RQ1 |
+| 6 | Hợp lệ ngoại tại (chuyến đi thật) | Chưa | ~15 (đề xuất) cho 10–15 cặp | Mạnh nhất, nhưng cần người dùng thật |
 
-Mục 1 và 2 nên làm trước: rẻ nhất mà đụng trực tiếp vào hai câu hỏi dễ bị chất vấn nhất.
+Ước tính "~42 lượt" cho B2+ trong bản đầu của kế hoạch là sai: nó lấy chi phí của hệ thống
+đề xuất áp cho B2+.
 
 ## 2. Chi tiết từng mục, kèm những gì repo đã có sẵn
 
@@ -51,11 +58,15 @@ Cách làm: thêm biến thể **B2+** bind thêm một công cụ `check_route_
 `find_violations` (`app/agents/reflector.py`), và nâng `max_steps` lên 10–12 để nó có chỗ
 lặp. Chạy trên đúng 42 kịch bản cũ.
 
-Hai kết quả đều dùng được, nên đây là việc không thể lỗ:
+**Kết quả (10/11, chi tiết ở `docs/PROGRESS_2026-11-10.md`):** B2+ né được 61,9% (26/42), so
+với 9,5% của B2 (22/0, p = 4,8×10⁻⁷). Nhận xét "baseline yếu" là đúng. Hệ thống đề xuất vẫn cao
+hơn (83,3%, 12/3, p = 0,035), nhưng mức ý nghĩa này nhạy với 3 kịch bản (p = 0,146 trong cả hai
+phép kiểm tra độ nhạy). Lợi thế vững là đường vòng ngắn hơn khoảng 3 lần (trung vị 0,68 so với
+2,35 km, p = 4,9×10⁻⁴) và 1 lượt LLM thay vì ~8.
 
-- B2+ vẫn thua rõ → luận điểm kiến trúc được củng cố mạnh hơn hẳn hiện nay;
-- B2+ bắt kịp → phát hiện thật, và phải báo cáo: đóng góp nằm ở *công cụ hình học*, không
-  phải ở việc tách tác tử. Thà tự tìm ra còn hơn bị hỏi ở buổi bảo vệ.
+Hệ quả cho luận văn: định khung lại đóng góp từ "đa tác tử thắng đơn tác tử" thành "tách kiểm
+tra và sửa lộ trình ra khỏi LLM". Câu chữ đề xuất ở Mục 4.1 của nhật ký 10/11. Bước tiếp nếu
+thầy yêu cầu: B2++ có thêm công cụ ring search, để cô lập nốt phần *sửa*.
 
 ### 2.2 Bộ kiểm tra giữ riêng (ưu tiên 2)
 
@@ -78,6 +89,13 @@ Việc cần làm: dựng ~15–20 kịch bản chỉ từ nguồn chưa dùng, 
 `scripts/validate_scenarios.py` để lọc kịch bản không khả thi hoặc không phân biệt được,
 rồi chạy benchmark **một lần, không chỉnh gì sau khi xem kết quả**. Con số đó là con số
 được báo cáo. Nếu tỷ lệ né tụt nhiều so với 83,3% thì đó là phát hiện, không phải thất bại.
+
+**Phải chạy sau cùng, trên hệ thống đã đóng băng** (Mục 3). Nếu chạy held-out rồi mới sửa
+Perception, con số held-out không còn mô tả hệ thống cuối; chạy lại trên cùng bộ đó thì nó hết
+"giữ riêng". Có thể **dựng** bộ held-out sớm, chỉ đừng **chạy** nó sớm.
+
+Held-out cũng là cách duy nhất để chốt câu hỏi còn treo từ B2+: lợi thế tỷ lệ né so với B2+
+hiện nhạy với 3 kịch bản, và cần cỡ mẫu lớn hơn.
 
 ### 2.3 Tổng quan tài liệu (ưu tiên 3 — làm song song, không tốn quota)
 
@@ -137,14 +155,30 @@ Bước trung gian đáng giá, làm được ngay mà không cần tuyển ngư
 quen — rồi chạy trên đó. Chưa phải nghiên cứu người dùng, nhưng đủ để bỏ được chữ "toàn bộ
 cặp điểm đều do dựng ra" khỏi phần mối đe dọa tính hợp lệ.
 
-## 3. Thứ tự đề nghị
+## 3. Thứ tự thực hiện (sửa 10/11)
 
-1. Nộp đồ án môn học (ngoài nhánh này).
-2. Mục 2.1 — B2+ cấp công cụ hình học.
-3. Mục 2.2 — held-out set.
-4. Mục 2.3 — tổng quan tài liệu, xen vào giữa các lần chạy.
-5. Quyết định ở Mục 2.5, vì nó có thể cần ý kiến giảng viên hướng dẫn, nên hỏi sớm.
-6. Mục 2.4, rồi 2.6.
+Bản đầu đặt held-out ở vị trí thứ hai. Thứ tự đó sai khi hệ thống còn sẽ thay đổi (sửa
+Perception cho #7, #39). Nguyên tắc mới:
+
+1. **Đóng băng trước, đánh giá sau.** Mọi thay đổi làm đổi hành vi hệ thống vào trước; sau đó
+   khóa lại, và mọi thực nghiệm báo cáo chạy trên bản đã khóa.
+2. **Đóng băng mô hình vùng ngập** (hình tròn 350 m) cho cả học kỳ này. Chuyển sang mô hình
+   theo đoạn đường sẽ đổi mọi con số RQ1. Nếu làm thì để học kỳ sau, coi như phiên bản mới và
+   chạy lại toàn bộ.
+3. Lớp thu thập tin **không** đổi hành vi hệ thống trên dữ liệu benchmark (tin đầu vào cố
+   định), nên làm song song được bất cứ lúc nào.
+
+| Thời gian | Việc |
+|---|---|
+| 11/11 | Nộp đồ án môn học (ngoài nhánh này); email hẹn thầy, gửi kèm kế hoạch này và nhật ký 10/11 |
+| ~16–17/11 | Gặp thầy: chốt Mục 2.5 (dựng lớp thu thập hay sửa câu chữ RQ1), có cần mô hình thứ hai và B2++ không, mức yêu cầu cho Mục 2.6, và các thay đổi hệ thống cho bản cuối |
+| 17–22/11 | Thay đổi hệ thống (Perception nhận tên địa điểm cho #7, #39; cache Perception), chạy lại 42 kịch bản cho bản mới, rồi **đóng băng** |
+| 23–29/11 | RQ2 trên bản đã đóng băng (Mục 5); lớp thu thập tin song song; dựng (chưa chạy) held-out |
+| 30/11–6/12 | Held-out — chạy **một lần**; `temperature > 0`; mô hình thứ hai |
+| 7–15/12 | Viết, và dự phòng cho vòng sửa của thầy — không cắt tuần này |
+
+Tổng quan tài liệu (Mục 2.3) làm rải rác suốt, xen vào lúc chờ benchmark. 15/11 là Chủ nhật,
+nên buổi gặp sớm nhất là thứ Hai 16/11; gửi email hẹn sớm.
 
 ## 4. Ghi chú còn nợ từ phiên trước, vẫn áp dụng ở nhánh này
 
@@ -154,3 +188,22 @@ cặp điểm đều do dựng ra" khỏi phần mối đe dọa tính hợp l�
   LLM. Đừng mang kết luận 30/10 sang.
 - `#7` và `#39` thất bại vì Perception không nhận tên địa điểm phi tên đường. Nếu lớp thu
   thập tin ở Mục 2.5 được dựng, sửa luôn chỗ này vì cùng vùng code.
+
+## 5. RQ2 trong cùng mốc 15/12 (mục tiêu 70–80%)
+
+Người dùng chốt (10/11): đến 15/12 thì RQ1 hoàn chỉnh, RQ2 đạt 70–80%. Đề tài kéo dài hai học
+kỳ, còn một học kỳ (4 tháng) để hoàn tất; RQ3 thuộc học kỳ sau.
+
+**RQ2 rẻ hơn vẻ ngoài.** RQ2 là ablation số vòng phản tư, mà vòng phản tư không gọi LLM. Mỗi
+mức chỉ tốn ~42 lượt cho Perception, gần như 0 khi có cache Perception. Runner đã có
+`--max-reflections`. Phần lớn công sức nằm ở phân tích và viết.
+
+Định nghĩa "70–80%" thành việc cụ thể, để đến 15/12 biết đã đạt hay chưa:
+
+- **Xong trước 15/12:** chạy 0/1/2 vòng (thêm 3, 4 nếu cần thấy điểm bão hòa) trên bản đã đóng
+  băng; 40 kịch bản (bỏ #7, #39) hoặc 42 nếu đã sửa Perception; kiểm định thống kê; một mục Kết
+  quả viết xong.
+- **Để học kỳ sau:** thảo luận sâu, phân tích lỗi, chạy RQ2 trên held-out.
+
+Bẫy đã biết (từ nhật ký 09/11): #7 và #39 dừng ở 0 vòng vì Perception không trả về gì, không
+phải vì không cần phản tư. Để nguyên thì đường cong bão hòa bị lệch.
