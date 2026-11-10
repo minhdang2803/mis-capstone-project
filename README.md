@@ -2,6 +2,8 @@
 
 Backend for **Research Question 1 (RQ1)** of a Master's thesis in MIS. It reads unstructured Vietnamese flood news, turns it into spatial hazard zones, routes around them with a real routing engine, and verifies the result.
 
+> **Branch `rq1_final_project`:** thesis-level RQ1 work (B2+ baseline, plan for the six gaps) is summarised in [`docs/README.md`](docs/README.md) (Vietnamese).
+
 ## Architecture (LangGraph `StateGraph`)
 
 ```
@@ -37,6 +39,7 @@ The proposed system is compared against two baselines (B1, B2) on the same scena
 | **B2 Single-Agent LLM** | One Gemini agent with `geocode_street` and `get_route` tools; no role split, no verifier | Baseline 2 |
 | **Proposed** | Perception → Reasoning → Reflector loop | Proposed system |
 | B1+ (ablation) | Perception + OSRM's own alternative routes, no reflection | Isolates what reflection adds |
+| B2+ (opt-in, thesis) | B2 plus a `check_route_safety` tool wrapping the Reflector's geometric check; answers with its least-violating route | Stronger single-agent baseline |
 
 Metrics: avoidance rate (all scenarios, and feasible ones only), extraction precision / recall, grounding accuracy, path overhead vs. B1 (km), latency (mean, p95, share under the 3.5 s target), reflection count.
 
